@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="simbolo-mawe.png">
+<meta property="og:title" content="Mawe Create">
+<meta property="og:description" content="Criação de sites profissionais com atendimento 100% online.">
+<title>Mawe Create</title>
+<meta name="description" content="Mawe Create: criação de sites profissionais com atendimento 100% online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: bandas alternadas marrom/creme, o arco do símbolo como moldura recorrente, uma coluna no celular */
+:root {
+  --brown: #2A211C;
+  --brown-2: #3A2F28;
+  --cream: #EFE9DD;
+  --cream-2: #E2D8C7;
+  --gold: #B08D57;
+  --gold-ink: #7A5C2E;
+  --soft-dark: #CFC6B8;
+  --soft-light: #4A3F37;
+  --serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --sans: 'Jost', 'Futura', 'Century Gothic', 'Avenir Next', system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--brown); color: var(--cream); font-family: var(--sans); font-size: 17px; line-height: 1.6; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+.band { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 88px; }
+.band.dark { background: var(--brown); color: var(--cream); }
+.band.light { background: var(--cream); color: var(--brown); }
+.wrap { max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px; }
+
+.eyebrow { font-size: 13px; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 14px; }
+.eyebrow::before { content: ""; width: 40px; height: 1px; background: currentColor; }
+.light .eyebrow { color: var(--gold-ink); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; margin: 0; text-wrap: balance; line-height: 1; }
+h2 { font-size: clamp(40px, 6vw, 64px); }
+h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--gold); }
+.light h2 em { color: var(--gold-ink); }
+.lead { font-size: 19px; max-width: 58ch; margin: 0; }
+.dark .lead { color: var(--soft-dark); }
+.light .lead { color: var(--soft-light); }
+.head { display: flex; flex-direction: column; gap: 18px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 999px; font-family: var(--sans); font-size: 14px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: transform .2s ease, background .2s ease; border: 1px solid var(--gold); cursor: pointer; }
+.btn.solid { background: var(--gold); color: var(--brown); }
+.btn.solid:hover { background: #C29E66; }
+.btn.ghost { background: transparent; color: var(--cream); }
+.btn.ghost:hover { background: rgba(176,141,87,0.14); }
+.btn:active { transform: translateY(1px); }
+
+/* Topo */
+.topbar { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px; border-bottom: 1px solid rgba(176,141,87,0.25); }
+.topbar .inner { max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.mini-arch { width: 30px; height: 38px; border: 1.5px solid var(--gold); border-radius: 15px 15px 0 0; display: grid; place-items: center; padding-top: 5px; font-family: var(--serif); font-weight: 600; font-size: 19px; }
+.wordmark { font-size: 15px; font-weight: 500; letter-spacing: 0.34em; }
+.wordmark span { font-weight: 300; color: var(--gold); }
+.nav { display: flex; gap: 28px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; }
+.nav a { text-decoration: none; color: var(--soft-dark); }
+.nav a:hover { color: var(--gold); }
+@media (max-width: 760px) {
+  .topbar { padding-block: 16px 14px; }
+  .topbar .inner { flex-wrap: wrap; row-gap: 14px; }
+  .nav { flex: 1 1 100%; min-width: 0; gap: 8px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; font-size: 11px; letter-spacing: 0.14em; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { flex-shrink: 0; white-space: nowrap; display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid rgba(176,141,87,0.5); border-radius: 999px; color: var(--cream); }
+  .nav a:hover, .nav a:active { background: rgba(176,141,87,0.14); color: var(--cream); }
+}
+
+/* Hero */
+.hero { padding-block: 72px 96px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 56px; align-items: center; }
+.hero-text { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+.hero h1 { font-size: clamp(46px, 7.2vw, 88px); line-height: 0.98; }
+.hero .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero .note { font-size: 14px; letter-spacing: 0.08em; color: var(--soft-dark); display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.hero .note span::before { content: "✦ "; color: var(--gold); }
+.hero-arch { justify-self: center; width: 100%; max-width: 340px; aspect-ratio: 3 / 4; border: 2px solid var(--gold); border-radius: 999px 999px 0 0; display: grid; place-items: center; position: relative; }
+.hero-arch::after { content: ""; position: absolute; inset: 18px; border: 1px solid rgba(176,141,87,0.35); border-radius: 999px 999px 0 0; }
+.hero-arch span { font-family: var(--serif); font-weight: 600; font-size: clamp(110px, 14vw, 170px); line-height: 1; padding-top: 12%; }
+@media (max-width: 760px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .hero-arch { max-width: 200px; order: -1; }
+  .hero .actions .btn { flex: 1 1 100%; }
+}
+
+/* Projetos */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 28px; }
+.card { display: flex; flex-direction: column; gap: 18px; text-decoration: none; color: var(--brown); }
+.thumb { aspect-ratio: 4 / 3; max-width: 100%; border-radius: 999px 999px 0 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 18% 12% 8%; text-align: center; transition: transform .35s ease; }
+.thumb.t-dark { background: var(--brown); color: var(--cream); }
+.thumb.t-line { background: transparent; border: 2px solid var(--gold); color: var(--brown); }
+.thumb.t-gold { background: var(--gold); color: var(--brown); }
+.thumb .tname { font-family: var(--serif); font-weight: 600; font-size: 40px; line-height: 1; }
+.thumb .tniche { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; opacity: 0.8; }
+.card:hover .thumb { transform: translateY(-6px); }
+.card-meta { display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--gold); padding-top: 16px; }
+.tag { font-size: 12px; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-ink); }
+.card h3 { font-size: 28px; }
+.card p { margin: 0; color: var(--soft-light); font-size: 16px; }
+.card .go { font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brown); margin-top: 4px; }
+.card:hover .go { color: var(--gold-ink); }
+.fineprint { font-size: 14px; color: var(--soft-light); margin: 0; }
+
+/* Tipos */
+.types { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 0 48px; }
+.type { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding-block: 26px; border-top: 1px solid rgba(176,141,87,0.35); }
+.type .arch-ico { width: 48px; height: 62px; border: 1.5px solid var(--gold); border-radius: 24px 24px 0 0; }
+.type:nth-child(3) .arch-ico { background: var(--gold); }
+.type h3 { font-size: 30px; margin-bottom: 6px; }
+.type p { margin: 0; color: var(--soft-dark); }
+.type .ideal { font-size: 14px; color: var(--gold); margin-top: 8px; letter-spacing: 0.04em; }
+
+/* Como funciona */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 28px; counter-reset: step; }
+.steps li { counter-increment: step; display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 1px solid var(--gold); }
+.steps li::before { content: counter(step, decimal-leading-zero); font-family: var(--serif); font-style: italic; font-size: 34px; color: var(--gold-ink); line-height: 1; }
+.steps strong { font-size: 18px; font-weight: 500; }
+.steps span { color: var(--soft-light); font-size: 16px; }
+.online { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; padding: 26px 30px; border: 1px solid var(--gold); border-radius: 999px; }
+.online b { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 26px; }
+.online span { color: var(--soft-light); }
+@media (max-width: 600px) { .online { border-radius: 28px; } }
+
+/* Contato */
+.cta .wrap { align-items: center; text-align: center; }
+.cta h2 { font-size: clamp(44px, 7vw, 76px); max-width: 16ch; }
+.cta .lead { margin: 0 auto; }
+.cta-symbol { width: 120px; height: auto; display: block; }
+.contacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; width: 100%; max-width: 860px; }
+.contact { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 22px 16px; border-top: 1px solid rgba(176,141,87,0.45); min-width: 0; }
+.contact .label { font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
+.contact .value { font-size: 18px; user-select: all; overflow-wrap: anywhere; }
+.copy { background: none; border: none; color: var(--soft-dark); font-family: var(--sans); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; padding: 8px 10px; min-height: 36px; }
+.copy:hover { color: var(--gold); }
+footer { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 96px; border-top: 1px solid rgba(176,141,87,0.25); text-align: center; font-size: 13px; letter-spacing: 0.12em; color: var(--soft-dark); }
+
+/* WhatsApp flutuante */
+.float-wa { position: fixed; right: calc(18px + env(safe-area-inset-right, 0px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 20; display: inline-flex; align-items: center; gap: 10px; padding: 0 22px; min-height: 54px; border-radius: 999px; background: var(--gold); color: var(--brown); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+.float-wa svg { flex-shrink: 0; }
+</style>
+<style>body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<header class="topbar band-top">
+  <div class="inner">
+    <a class="brand" href="#inicio" aria-label="Mawe Create, início">
+      <span class="mini-arch" aria-hidden="true">M</span>
+      <span class="wordmark">MAWE <span>CREATE</span></span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#projetos">Projetos</a>
+      <a href="#tipos">Tipos de site</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="band dark hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <div class="eyebrow">Agência de criação de sites</div>
+        <h1>Sites que fazem o seu negócio ser <em>encontrado e escolhido.</em></h1>
+        <p class="lead">Experiências digitais com propósito. Criamos o site do seu negócio do zero, com um atendimento 100% online, do primeiro contato até o site no ar.</p>
+        <div class="actions">
+          <a class="btn solid" href="https://wa.me/5547992088468?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mawe%20Create%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
+          <a class="btn ghost" href="#projetos">Ver projetos</a>
+        </div>
+        <div class="note"><span>Tudo pelo WhatsApp</span><span>Prazos de 5 a 12 dias úteis</span><span>Pagamento em 2 vezes</span></div>
+      </div>
+      <div class="hero-arch" aria-hidden="true"><span>M</span></div>
+    </div>
+  </section>
+
+  <section class="band light" id="projetos">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Projetos</div>
+        <h2>Veja o que a gente <em>já criou</em></h2>
+        <p class="lead">Cada projeto mostra um tipo de site diferente. Toque para abrir e navegar como um cliente navegaria.</p>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://essenza-premium-care.vercel.app/" target="_blank" rel="noopener">
+          <div class="thumb t-dark"><span class="tname">Essenza</span><span class="tniche">Massoterapia</span></div>
+          <div class="card-meta">
+            <span class="tag">One page</span>
+            <h3>Essenza Premium Care</h3>
+            <p>Espaço de massoterapia e bem-estar, com agendamento direto pelo WhatsApp.</p>
+            <span class="go">Ver projeto ↗</span>
+          </div>
+        </a>
+        <a class="card" href="https://vittaskin.vercel.app/" target="_blank" rel="noopener">
+          <div class="thumb t-gold"><span class="tname">VittaSkin</span><span class="tniche">Skincare</span></div>
+          <div class="card-meta">
+            <span class="tag">Landing page</span>
+            <h3>VittaSkin</h3>
+            <p>Página de venda de um único produto: o kit de skincare para a rotina diária.</p>
+            <span class="go">Ver projeto ↗</span>
+          </div>
+        </a>
+        <a class="card" href="https://nexacontabilidade.vercel.app/" target="_blank" rel="noopener">
+          <div class="thumb t-line"><span class="tname">Nexa</span><span class="tniche">Contabilidade</span></div>
+          <div class="card-meta">
+            <span class="tag">Institucional</span>
+            <h3>Nexa Contabilidade</h3>
+            <p>Escritório de contabilidade consultiva, com serviços e formulário de contato.</p>
+            <span class="go">Ver projeto ↗</span>
+          </div>
+        </a>
+        <a class="card" href="https://arquiteturaluna.vercel.app" target="_blank" rel="noopener">
+          <div class="thumb t-dark"><span class="tname">Luna</span><span class="tniche">Arquitetura</span></div>
+          <div class="card-meta">
+            <span class="tag">Portfólio</span>
+            <h3>Luna Arquitetura + Interiores</h3>
+            <p>Estúdio de arquitetura com projetos residenciais e de interiores, processo e serviços.</p>
+            <span class="go">Ver projeto ↗</span>
+          </div>
+        </a>
+        <a class="card" href="https://ondafestival.vercel.app/" target="_blank" rel="noopener">
+          <div class="thumb t-gold"><span class="tname">Onda</span><span class="tniche">Festival</span></div>
+          <div class="card-meta">
+            <span class="tag">Hotsite</span>
+            <h3>Onda Festival</h3>
+            <p>Festival de música, arte e gastronomia, com programação e venda de ingressos.</p>
+            <span class="go">Ver projeto ↗</span>
+          </div>
+        </a>
+        <a class="card" href="https://summita.vercel.app" target="_blank" rel="noopener">
+          <div class="thumb t-line"><span class="tname">Summita</span><span class="tniche">Evento de negócios</span></div>
+          <div class="card-meta">
+            <span class="tag">Hotsite</span>
+            <h3>Summita</h3>
+            <p>Fórum de liderança e inovação, com agenda, palestrantes e ingressos.</p>
+            <span class="go">Ver projeto ↗</span>
+          </div>
+        </a>
+      </div>
+      <p class="fineprint">Projetos conceito criados pela Mawe Create para mostrar cada tipo de site.</p>
+    </div>
+  </section>
+
+  <section class="band dark" id="tipos">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Tipos de site</div>
+        <h2>Qual site é <em>ideal para você?</em></h2>
+        <p class="lead">Você não precisa entender de tecnologia. Conte o que quer que o site faça e a gente indica o tipo certo.</p>
+      </div>
+      <div class="types">
+        <div class="type"><div class="arch-ico" aria-hidden="true"></div><div><h3>One page</h3><p>O cartão de visitas digital: uma página com tudo sobre o seu negócio e um botão para o WhatsApp.</p><div class="ideal">Ideal para quem quer começar a aparecer no Google.</div></div></div>
+        <div class="type"><div class="arch-ico" aria-hidden="true"></div><div><h3>Landing page</h3><p>A página que vende uma coisa só, com um único botão de ação.</p><div class="ideal">Ideal para anúncios e serviços carro-chefe.</div></div></div>
+        <div class="type"><div class="arch-ico" aria-hidden="true"></div><div><h3>Hotsite</h3><p>A vitrine de uma campanha, evento ou lançamento com data marcada.</p><div class="ideal">Ideal para promoções e eventos.</div></div></div>
+        <div class="type"><div class="arch-ico" aria-hidden="true"></div><div><h3>Portfólio</h3><p>O álbum dos seus trabalhos, com galeria e antes e depois.</p><div class="ideal">Ideal para quem vende pelo visual.</div></div></div>
+        <div class="type"><div class="arch-ico" aria-hidden="true"></div><div><h3>Institucional</h3><p>A casa completa do seu negócio: sobre, serviços, equipe e contato.</p><div class="ideal">Ideal para clínicas e empresas com vários serviços.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band light" id="como-funciona">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Como funciona</div>
+        <h2>Do primeiro “oi” ao <em>site no ar</em></h2>
+      </div>
+      <ol class="steps">
+        <li><strong>Conversa no WhatsApp</strong><span>Entendemos o seu negócio e indicamos o site ideal.</span></li>
+        <li><strong>Briefing online</strong><span>Você envia informações, fotos e cores por um formulário rápido.</span></li>
+        <li><strong>Proposta e entrada</strong><span>Aceite por mensagem e 50% de entrada por Pix.</span></li>
+        <li><strong>Criação e ajustes</strong><span>Você acompanha pela prévia e pede até 2 rodadas de alterações.</span></li>
+        <li><strong>Site no ar</strong><span>Com os 50% finais, publicamos e entregamos tudo para você.</span></li>
+      </ol>
+      <div class="online"><b>100% online</b><span>Sem reuniões presenciais. Se preferir conversar ao vivo, fazemos uma chamada de vídeo.</span></div>
+    </div>
+  </section>
+
+  <section class="band dark cta" id="contato">
+    <div class="wrap">
+      <img class="cta-symbol" src="simbolo-mawe.png" alt="Símbolo da Mawe Create">
+      <h2>Vamos criar o site do <em>seu negócio?</em></h2>
+      <p class="lead">Chame no WhatsApp e receba uma indicação do site ideal para você, sem compromisso.</p>
+      <a class="btn solid" href="https://wa.me/5547992088468?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mawe%20Create%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <div class="contacts">
+        <div class="contact"><span class="label">WhatsApp</span><span class="value" id="v-wa">(47) 99208-8468</span><button class="copy" type="button" data-copy="v-wa">Copiar</button></div>
+        <div class="contact"><span class="label">Instagram</span><a class="value" href="https://www.instagram.com/mawe.create/" target="_blank" rel="noopener">@mawe.create</a></div>
+        <div class="contact"><span class="label">E-mail</span><span class="value" id="v-mail">mawe.create@gmail.com</span><button class="copy" type="button" data-copy="v-mail">Copiar</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Mawe Create · Experiências digitais com propósito · Atendimento online para todo o Brasil</footer>
+
+<a class="float-wa" href="https://wa.me/5547992088468?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mawe%20Create%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Chamar a Mawe Create no WhatsApp">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+  <span>Orçamento</span>
+</a>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.getAttribute('data-copy'));
+    var text = el.textContent.trim();
+    var done = function () { btn.textContent = 'Copiado'; setTimeout(function () { btn.textContent = 'Copiar'; }, 1800); };
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selecionado';
+      setTimeout(function () { btn.textContent = 'Copiar'; }, 1800);
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+</body>
+</html>
