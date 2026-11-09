@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mawe Create | Sites e experiências digitais</title>
-<meta name="description" content="Sites, sistemas e presença digital para pequenos negócios. Peça uma prévia grátis do site da sua empresa, com atendimento 100% online.">
-<meta property="og:title" content="Mawe Create | Sites e experiências digitais">
-<meta property="og:description" content="Peça uma prévia grátis do site da sua empresa. Atendimento 100% online para todo o Brasil.">
+<title>Mawe Create | Sites que trazem clientes</title>
+<meta name="description" content="Sites feitos para trazer clientes e vendas para pequenos negócios. Peça um orçamento grátis do site da sua empresa, com atendimento 100% online.">
+<meta property="og:title" content="Mawe Create | Sites que trazem clientes">
+<meta property="og:description" content="Sites feitos para trazer clientes e vendas. Atendimento 100% online para todo o Brasil.">
 <meta property="og:image" content="https://www.mawecreate.com.br/simbolo-mawe.png">
 <link rel="icon" type="image/png" href="simbolo-mawe.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@300;400;500;600&display=swap">
 <style>
 :root {
   --brown: #2A211C;
@@ -24,8 +24,8 @@
   --gold-ink: #7A5C2E;
   --muted-on-dark: #CFC6B8;
   --muted-on-light: #5A4D43;
-  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --sans: 'Jost', 'Avenir Next', 'Century Gothic', system-ui, sans-serif;
+  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans: 'DM Sans', 'Avenir Next', 'Helvetica Neue', system-ui, sans-serif;
   --gutter: max(16px, env(safe-area-inset-left, 0px));
 }
 * { box-sizing: border-box; }
@@ -72,7 +72,7 @@ p { margin: 0; }
 /* Hero */
 .hero { padding: 72px var(--gutter) 112px; position: relative; overflow: hidden; }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 64px; align-items: center; }
-.hero h1 { font-size: clamp(44px, 6vw, 80px); line-height: .98; max-width: 15ch; }
+.hero h1 { font-size: clamp(42px, 5.8vw, 78px); line-height: 1.04; max-width: 15ch; }
 .hero-sub { font-size: 20px; color: var(--muted-on-dark); max-width: 46ch; margin-top: 28px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
 .hero-facts { list-style: none; padding: 0; margin: 44px 0 0; display: flex; flex-wrap: wrap; gap: 12px 32px; font-size: 15px; color: var(--muted-on-dark); }
@@ -109,7 +109,9 @@ p { margin: 0; }
 .mini .m-cta { margin-top: 18px; align-self: flex-start; font-size: 12px; font-weight: 500; padding: 9px 16px; border-radius: 999px; background: var(--m-accent); color: var(--m-accent-ink, #fff); }
 .mini .m-shape { position: absolute; border-radius: 50%; filter: blur(2px); opacity: .55; }
 
-.p-essenza { background: radial-gradient(120% 80% at 80% 10%, #5B4636 0%, #2E2219 60%); color: #F3E8D8; --m-accent: #C9A47A; --m-accent-ink: #2E2219; }
+.p-jakeline { background: radial-gradient(120% 80% at 80% 10%, #4A4F55 0%, #24272B 62%); color: #F2EEF0; --m-accent: #E8559B; --m-accent-ink: #FFFFFF; --m-font: var(--sans); --m-weight: 500; }
+.p-framboesa { background: radial-gradient(120% 80% at 75% 5%, #5A2440 0%, #1E1418 62%); color: #F4FBF6; --m-accent: #FF7AB6; --m-accent-ink: #1E1418; --m-font: Georgia, 'Times New Roman', serif; --m-weight: 700; }
+.work .real-tag { position: absolute; left: 50%; top: 18px; transform: translateX(-50%); white-space: nowrap; padding: 7px 13px; border-radius: 999px; background: var(--gold); color: var(--brown); font-size: 13px; font-weight: 500; }
 .p-vitta { background: linear-gradient(160deg, #F4E4DD 0%, #E9CFC4 100%); color: #3B2A27; --m-accent: #3B2A27; --m-font: var(--sans); --m-weight: 500; }
 .p-nexa { background: linear-gradient(170deg, #17324D 0%, #0F2236 100%); color: #EAF1F7; --m-accent: #E7B54A; --m-accent-ink: #0F2236; --m-font: var(--sans); --m-weight: 600; }
 .p-luna { background: linear-gradient(180deg, #D9D3C9 0%, #BDB4A6 100%); color: #26231F; --m-accent: #26231F; }
@@ -181,7 +183,7 @@ p { margin: 0; }
 .faq .answer { padding: 0 0 26px; color: var(--muted-on-light); max-width: 64ch; }
 .faq .answer p + p { margin-top: 10px; }
 
-/* Prévia grátis */
+/* Orçamento */
 .cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; }
 .cta h2 { font-size: clamp(42px, 6vw, 72px); }
 .cta .section-intro { margin-top: 24px; }
@@ -241,7 +243,7 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
       <a href="#trabalhos">Trabalhos</a>
       <a href="#servicos">Serviços</a>
       <a href="#duvidas">Dúvidas</a>
-      <a class="btn btn-gold" href="#previa">Prévia grátis</a>
+      <a class="btn btn-gold" href="#orcamento">Orçamento grátis</a>
     </nav>
   </div>
 </header>
@@ -251,10 +253,10 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
       <div>
-        <h1 id="hero-title">Sites e experiências digitais que fazem o cliente escolher você.</h1>
-        <p class="hero-sub">Criamos o site do seu negócio do zero, com atendimento 100% online. E antes de você decidir qualquer coisa, preparamos uma prévia grátis com a cara da sua empresa.</p>
+        <h1 id="hero-title">Sites feitos para trazer clientes e vendas para o seu negócio.</h1>
+        <p class="hero-sub">Seu cliente procura no Google, encontra o seu site e chama você no WhatsApp. A gente cria esse caminho do zero, com a cara da sua empresa e atendimento 100% online.</p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="#previa">Quero uma prévia grátis</a>
+          <a class="btn btn-gold" href="#orcamento">Quero um orçamento grátis</a>
           <a class="btn btn-line" href="#trabalhos">Ver trabalhos</a>
         </div>
         <ul class="hero-facts">
@@ -270,7 +272,7 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
           <path class="inner" d="M22 520 V210 A178 178 0 0 1 378 210 V520"/>
         </svg>
         <div class="window" id="window"></div>
-        <p class="stage-caption" id="stage-caption">Agora: <b>Essenza</b>, massoterapia</p>
+        <p class="stage-caption" id="stage-caption">Agora: <b>Jakeline Cuco</b>, massoterapia</p>
       </div>
     </div>
   </section>
@@ -316,8 +318,8 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
     <div class="wrap">
       <div class="work-head">
         <div>
-          <h2 class="section-title" id="work-title">Sites que a gente já criou</h2>
-          <p class="section-intro">Cada um tem o visual do próprio negócio. Nada de modelo pronto igual para todo mundo.</p>
+          <h2 class="section-title" id="work-title">Sites pensados para vender</h2>
+          <p class="section-intro">Cada projeto tem o visual do próprio negócio e um único objetivo: levar o visitante até o WhatsApp. Nada de modelo pronto igual para todo mundo.</p>
         </div>
         <p class="work-hint">
           <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13 17V7.5a2 2 0 0 1 4 0V15l6.4 1.2a3 3 0 0 1 2.4 3.3l-.8 6.2a4 4 0 0 1-4 3.5h-5.3a4 4 0 0 1-3.2-1.6l-4-5.5a2 2 0 0 1 3-2.6L13 21"/><path d="M8 7.5a7 7 0 0 1 14 0" stroke-opacity=".5"/></svg>
@@ -326,34 +328,34 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
       </div>
 
       <div class="work-grid" id="work-grid"></div>
-      <p class="work-note">Projetos criados pela Mawe Create para mostrar nosso estilo em diferentes ramos.</p>
+      <p class="work-note">Clientes reais e projetos conceito criados pela Mawe Create para mostrar nosso trabalho em diferentes ramos.</p>
     </div>
   </section>
 
   <section class="band dark" id="servicos" aria-labelledby="services-title">
     <div class="wrap">
-      <h2 class="section-title" id="services-title">Tudo o que o seu negócio precisa para ser encontrado</h2>
-      <p class="section-intro">Começamos pelo site, mas não paramos nele. Você fala com a gente e resolve a presença digital inteira em um só lugar.</p>
+      <h2 class="section-title" id="services-title">Tudo o que o seu negócio precisa para vender mais</h2>
+      <p class="section-intro">Ninguém quer só um site. Você quer mais pedidos, mais agendamentos e mais faturamento. Por isso cada serviço da Mawe Create é pensado para trazer resultado, e você resolve tudo em um só lugar.</p>
       <div class="services">
         <div class="service">
           <h3>Sites</h3>
-          <p>O endereço do seu negócio na internet, com serviços, fotos, localização e um botão que leva o cliente direto para o seu WhatsApp.</p>
-          <span class="for">Para quem quer vender mais</span>
-        </div>
-        <div class="service">
-          <h3>Sistemas sob medida</h3>
-          <p>Ferramentas simples para organizar o dia a dia: turmas, treinos, agenda, atendimentos e anotações, do jeito que o seu negócio funciona.</p>
-          <span class="for">Para quem vive no caderno</span>
+          <p>Um site que apresenta o seu negócio, passa confiança e leva o visitante direto para o seu WhatsApp, pronto para pedir, agendar ou comprar.</p>
+          <span class="for">Para transformar visitas em clientes</span>
         </div>
         <div class="service">
           <h3>Google Meu Negócio</h3>
-          <p>Seu perfil no Google e no Maps configurado do jeito certo, para aparecer quando alguém procura o que você faz na sua cidade.</p>
-          <span class="for">Para ser achado no Google</span>
+          <p>Seu perfil no Google e no Maps configurado do jeito certo, para aparecer na hora em que alguém procura o que você faz na sua cidade.</p>
+          <span class="for">Para ser encontrado primeiro</span>
         </div>
         <div class="service">
           <h3>Artes para redes sociais</h3>
-          <p>Posts e stories para Instagram e status de WhatsApp, prontos para divulgar promoções e o dia a dia do seu negócio.</p>
-          <span class="for">Para manter o perfil vivo</span>
+          <p>Posts e stories para Instagram e status de WhatsApp, prontos para divulgar promoções e fazer o cliente lembrar de você.</p>
+          <span class="for">Para vender todo dia</span>
+        </div>
+        <div class="service">
+          <h3>Sistemas sob medida</h3>
+          <p>Ferramentas simples para organizar o dia a dia: turmas, treinos, agenda, atendimentos e financeiro, do jeito que o seu negócio funciona.</p>
+          <span class="for">Para sair do caderno</span>
         </div>
         <div class="service">
           <h3>Identidade visual</h3>
@@ -376,7 +378,7 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
         <p>A Mawe Create é a Maria e o Wesley. Somos só nós dois, e é justamente isso que faz diferença: quem conversa com você é quem cria o seu site. Sem intermediário, sem atendimento robótico e sem sumir depois da entrega.</p>
         <p>Trabalhamos 100% online, então atendemos negócios de qualquer cidade do Brasil.</p>
         <ul class="promise">
-          <li><strong>Prévia grátis</strong><span>Você vê antes de pagar</span></li>
+          <li><strong>Passo a passo</strong><span>Você acompanha cada etapa</span></li>
           <li><strong>2 rodadas</strong><span>de ajustes incluídas</span></li>
           <li><strong>Seu domínio</strong><span>fica no nome da sua empresa</span></li>
         </ul>
@@ -384,7 +386,7 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
       <div class="about-mark" role="img" aria-label="Símbolo da Mawe Create: a letra M dentro de um arco dourado">
         <svg viewBox="0 0 360 450" aria-hidden="true">
           <path d="M70 450 V180 A110 110 0 0 1 290 180 V450" fill="none" stroke="#B08D57" stroke-width="5"/>
-          <text x="180" y="330" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-weight="600" font-size="170" fill="#EFE9DD">M</text>
+          <text x="180" y="330" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="600" font-size="170" fill="#EFE9DD">M</text>
         </svg>
       </div>
     </div>
@@ -395,8 +397,8 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
       <h2 class="section-title" id="faq-title">Dúvidas comuns</h2>
       <div class="faq">
         <details>
-          <summary>A prévia grátis tem algum compromisso?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>Nenhum. Montamos uma prévia com o nome e o estilo do seu negócio para você ver como ficaria. Se gostar, a gente conversa sobre o projeto. Se não gostar, tudo bem.</p></div>
+          <summary>O orçamento tem algum compromisso?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="answer"><p>Nenhum. Você conta sobre o seu negócio, a gente indica o tipo de site ideal e envia o valor pelo WhatsApp. Se fizer sentido para você, começamos o projeto. Se não, tudo bem.</p></div>
         </details>
         <details>
           <summary>Quanto tempo leva para o site ficar pronto?<span class="plus" aria-hidden="true"></span></summary>
@@ -408,7 +410,7 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
         </details>
         <details>
           <summary>Preciso ir até algum lugar ou fazer reunião?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>Não. Tudo acontece pelo WhatsApp: você responde um formulário rápido com as informações do seu negócio, acompanha o site pela prévia e pede os ajustes por mensagem. Se preferir conversar ao vivo, fazemos uma chamada de vídeo.</p></div>
+          <div class="answer"><p>Não. Tudo acontece pelo WhatsApp: você responde um formulário rápido com as informações do seu negócio, acompanha cada etapa do site e pede os ajustes por mensagem. Se preferir conversar ao vivo, fazemos uma chamada de vídeo.</p></div>
         </details>
         <details>
           <summary>E se eu quiser mudar alguma coisa?<span class="plus" aria-hidden="true"></span></summary>
@@ -426,14 +428,14 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
     </div>
   </section>
 
-  <section class="band dark" id="previa" aria-labelledby="cta-title">
+  <section class="band dark" id="orcamento" aria-labelledby="cta-title">
     <div class="wrap cta">
       <div>
-        <h2 id="cta-title">Veja o site do seu negócio antes de pagar qualquer coisa</h2>
-        <p class="section-intro">Conte rapidinho sobre a sua empresa e a gente prepara uma prévia com a cara dela. É grátis e sem compromisso.</p>
+        <h2 id="cta-title">Vamos colocar o seu negócio na frente do cliente?</h2>
+        <p class="section-intro">Conte rapidinho sobre a sua empresa e a gente te manda um orçamento pelo WhatsApp. É grátis e sem compromisso.</p>
         <ol class="steps">
           <li><span><b>Você manda os dados</b> pelo formulário ao lado</span></li>
-          <li><span><b>A gente prepara a prévia</b> e te envia pelo WhatsApp</span></li>
+          <li><span><b>A gente analisa o seu negócio</b> e envia o orçamento pelo WhatsApp</span></li>
           <li><span><b>Você decide</b> se quer seguir com o projeto</span></li>
         </ol>
       </div>
@@ -447,7 +449,7 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
         <div class="field" id="f-biz">
           <label for="biz">Nome do negócio</label>
           <input id="biz" name="biz" autocomplete="organization" placeholder="Ex.: Padaria Pão de Ouro">
-          <span class="error">Escreva o nome do negócio para montarmos a prévia.</span>
+          <span class="error">Escreva o nome do negócio para prepararmos o orçamento.</span>
         </div>
         <div class="field">
           <label for="kind">Ramo</label>
@@ -467,7 +469,7 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
         </div>
         <button class="btn btn-gold" type="submit">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
-          Pedir minha prévia no WhatsApp
+          Pedir meu orçamento no WhatsApp
         </button>
         <p class="form-note">O WhatsApp abre com a mensagem pronta. É só enviar.</p>
       </form>
@@ -501,7 +503,7 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
   </div>
 </footer>
 
-<a class="float-wa" id="float-wa" href="https://wa.me/5547992088468?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mawe%20Create%20e%20quero%20uma%20pr%C3%A9via%20gr%C3%A1tis." target="_blank" rel="noopener" aria-label="Falar com a Mawe Create no WhatsApp">
+<a class="float-wa" id="float-wa" href="https://wa.me/5547992088468?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mawe%20Create%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar com a Mawe Create no WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
   <span>Fale com a gente</span>
 </a>
@@ -510,11 +512,11 @@ footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8
 const WHATSAPP = '5547992088468';
 
 const projects = [
-  { cls: 'p-essenza', nav: 'ESSENZA', name: 'Essenza', kind: 'Massoterapia', line: 'Um espaço para desacelerar, com agendamento direto pelo WhatsApp.', cta: 'Agendar sessão', desc: 'Espaço de massoterapia e bem-estar', url: 'https://essenza-premium-care.vercel.app/', shape: '#C9A47A44' },
+  { cls: 'p-jakeline', nav: 'JAKELINE CUCO', name: 'Jakeline Cuco', kind: 'Massoterapia', line: 'Seu momento de cuidado e bem-estar, com agendamento pelo WhatsApp.', cta: 'Agendar pelo WhatsApp', desc: 'One page pensado para transformar visitas em agendamentos', url: 'https://jakelinecucomassoterapia.vercel.app/', shape: '#E8559B33', real: true },
+  { cls: 'p-framboesa', nav: 'DONA FRAMBOESA', name: 'Dona Framboesa', kind: 'Confeitaria', line: 'Bolo bonito é bom. Bolo gostoso é melhor ainda.', cta: 'Fazer encomenda', desc: 'Cardápio online com encomenda direto no WhatsApp', url: 'https://donaframboesa.vercel.app/', shape: '#FF7AB644' },
   { cls: 'p-vitta', nav: 'VITTASKIN', name: 'VittaSkin', kind: 'Skincare', line: 'O kit completo para a sua rotina de cuidados diários.', cta: 'Comprar o kit', desc: 'Página de venda de um produto', url: 'https://vittaskin.vercel.app/', shape: '#E3A99A66' },
   { cls: 'p-nexa', nav: 'NEXA', name: 'Nexa Contabilidade', kind: 'Contabilidade', line: 'Contabilidade consultiva para empresas que querem crescer.', cta: 'Falar com um contador', desc: 'Escritório de contabilidade', url: 'https://nexacontabilidade.vercel.app/', shape: '#E7B54A33' },
   { cls: 'p-luna', nav: 'LUNA', name: 'Luna Arquitetura', kind: 'Arquitetura e interiores', line: 'Projetos residenciais pensados para o jeito de cada família.', cta: 'Ver projetos', desc: 'Estúdio de arquitetura', url: 'https://arquiteturaluna.vercel.app', shape: '#FFFFFF55' },
-  { cls: 'p-onda', nav: 'ONDA', name: 'Onda Festival', kind: 'Festival', line: 'Música, arte e gastronomia em três dias de verão.', cta: 'Comprar ingresso', desc: 'Site de evento com venda de ingressos', url: 'https://ondafestival.vercel.app/', shape: '#FFD16655' },
   { cls: 'p-summita', nav: 'SUMMITA', name: 'Summita', kind: 'Evento de negócios', line: 'O fórum de liderança e inovação do ano.', cta: 'Garantir vaga', desc: 'Site de evento corporativo', url: 'https://summita.vercel.app', shape: '#5FB3A133' }
 ];
 
@@ -551,6 +553,7 @@ document.getElementById('work-grid').innerHTML = projects.map(p => `
   <a class="work" href="${p.url}" target="_blank" rel="noopener" aria-label="Abrir o site ${p.name} em uma nova aba">
     <div class="work-screen">
       ${mini(p)}
+      ${p.real ? '<span class="real-tag">Cliente real</span>' : ''}
       <span class="open">Abrir site
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5"/></svg>
       </span>
@@ -573,7 +576,7 @@ form.addEventListener('submit', (e) => {
   if (!name) { form.name.focus(); return; }
   if (!biz) { form.biz.focus(); return; }
   const link = form.link.value.trim();
-  let msg = `Olá! Vim pelo site da Mawe Create e quero uma prévia grátis.\n\nMeu nome: ${name}\nNegócio: ${biz}\nRamo: ${form.kind.value}`;
+  let msg = `Olá! Vim pelo site da Mawe Create e quero um orçamento para o site do meu negócio.\n\nMeu nome: ${name}\nNegócio: ${biz}\nRamo: ${form.kind.value}`;
   if (link) msg += `\nInstagram ou site: ${link}`;
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
 });
@@ -581,10 +584,10 @@ form.addEventListener('submit', (e) => {
   if (e.target.value.trim()) e.target.parentElement.classList.remove('invalid');
 }));
 
-// Botão flutuante aparece depois do topo e some na seção da prévia
+// Botão flutuante aparece depois do topo e some na seção do orçamento
 const floatWa = document.getElementById('float-wa');
 const hero = document.querySelector('.hero');
-const cta = document.getElementById('previa');
+const cta = document.getElementById('orcamento');
 let pastHero = false, atCta = false;
 const update = () => floatWa.classList.toggle('show', pastHero && !atCta);
 new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; update(); }).observe(hero);
