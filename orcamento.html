@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulação de orçamento | MaweCreate</title>
+<meta name="description" content="Simule o orçamento do seu site, Google, social media ou sistema com a MaweCreate e veja um valor aproximado na hora.">
+<link rel="canonical" href="https://mawecreate.com.br/orcamento.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1b1310">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="MaweCreate">
+<meta property="og:title" content="Simulação de orçamento | MaweCreate">
+<meta property="og:description" content="Simule o orçamento do seu site, Google, social media ou sistema com a MaweCreate e veja um valor aproximado na hora.">
+<meta property="og:url" content="https://mawecreate.com.br/orcamento.html">
+<meta property="og:image" content="https://mawecreate.com.br/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="brand" href="index.html" aria-label="MaweCreate, página inicial"><img src="assets/simbolo-mawe.png" alt="" width="34" height="42"><span><b>MAWE</b><i>CREATE</i></span></a>
+  <nav id="nav" aria-label="Menu principal">
+   <div class="dd" id="dd"><button class="ddb" id="ddb" type="button" aria-expanded="false" aria-controls="ddm">Serviços</button><div class="ddm" id="ddm"><a href="criacao-de-sites.html"><b>Criação de sites</b><small>One page, landing page, institucional e link na bio</small></a><a href="google-meu-negocio.html"><b>Google Meu Negócio</b><small>Apareça no Google e no Maps</small></a><a href="social-media.html"><b>Social Media</b><small>Instagram organizado e conteúdo todo mês</small></a><a href="sistemas-personalizados.html"><b>Sistemas personalizados</b><small>Gestão, educação e organização pessoal</small></a></div></div>
+   <a href="projetos.html">Projetos</a><a href="sobre.html">Sobre</a><a href="blog.html">Blog</a><a href="index.html#duvidas">Dúvidas</a><a class="navcta" href="orcamento.html">Simular orçamento</a>
+  </nav>
+  <a class="btn btn-line" href="orcamento.html">Simular orçamento</a>
+  <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+ </div>
+</header>
+<main>
+<section class="band light">
+ <div class="wiz">
+  <h1 style="font-size:clamp(32px,4.4vw,48px)">Simule o seu orçamento</h1>
+  <p class="lead" style="margin-top:12px">Leva menos de 2 minutos. No final você vê um valor aproximado para o seu projeto.</p>
+  <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+  <p class="mute" id="count" style="font-size:14px;margin:-18px 0 22px"></p>
+  <form id="wiz" novalidate></form>
+  <div class="done" id="done" aria-live="polite">
+   <span class="k" id="d-k">Estimativa para o seu projeto, a partir de</span>
+   <div class="total" id="d-total"></div>
+   <div class="monthly" id="d-month"></div>
+   <ul class="items" id="d-items"></ul>
+   <div class="tip" id="d-tip"></div>
+   <p class="note">Valores no Pix. No cartão, em até 12x com a taxa da maquininha. Este é um valor aproximado: o valor final é confirmado depois da nossa conversa no WhatsApp.</p>
+   <div class="ctas" style="margin-top:4px"><a class="btn btn-gold" id="d-wa" href="#" target="_blank" rel="noopener">Abrir o WhatsApp de novo</a><button class="btn btn-line" type="button" id="d-reset">Refazer simulação</button></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div><a class="brand" href="index.html"><img src="assets/simbolo-mawe.png" alt="" width="34" height="42"><span><b>MAWE</b><i>CREATE</i></span></a><p class="mute" style="margin-top:16px;max-width:36ch;font-size:15px">Experiências digitais com propósito. Atendimento 100% online para todo o Brasil.</p></div>
+  <div><h4>Serviços</h4><ul><li><a href="criacao-de-sites.html">Criação de sites</a></li><li><a href="google-meu-negocio.html">Google Meu Negócio</a></li><li><a href="social-media.html">Social Media</a></li><li><a href="sistemas-personalizados.html">Sistemas personalizados</a></li></ul></div>
+  <div><h4>Navegue</h4><ul><li><a href="projetos.html">Projetos</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="blog.html">Blog</a></li><li><a href="orcamento.html">Simular orçamento</a></li><li><a href="privacidade.html">Política de privacidade</a></li></ul></div>
+  <div><h4>Contato</h4><ul><li><a href="https://wa.me/5547992088468" target="_blank" rel="noopener">WhatsApp (47) 99208-8468</a></li><li><a href="mailto:contato@mawecreate.com.br">contato@mawecreate.com.br</a></li><li><a href="https://instagram.com/mawecreate" target="_blank" rel="noopener">Instagram @mawecreate</a></li></ul></div>
+ </div>
+ <p class="copy"><span>© 2026 MaweCreate. Todos os direitos reservados.</span><a href="privacidade.html">Política de privacidade</a></p>
+</footer>
+<a class="wa" href="https://wa.me/5547992088468?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20MaweCreate." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<script src="assets/leads.js"></script>
+<script>
+{
+const WA='5547992088468';
+const brl=v=>'R$ '+v.toLocaleString('pt-BR');
+/* Tabela de preços: altere aqui quando os valores mudarem. Valores em lista = mensal */
+const PRICE={site:{bio:250,one:700,landing:900,port:800,inst:1500,naosei:700},google:{zero:300,otim:100,gestao:[149]},social:{org:350,ess:[800],comp:[1200]},sistema:{simples:800,empresa:1200}};
+const S=[
+ {id:'contato',q:'Para começar, como podemos falar com você?',h:'Usamos esses dados só para conversar sobre o seu orçamento.'},
+ {id:'need',multi:1,q:'O que sua empresa precisa?',h:'Pode marcar mais de uma opção.',o:[['site','Um site profissional','Para o cliente conhecer o seu negócio e entrar em contato'],['google','Aparecer no Google','Ser encontrado por quem procura o que você vende'],['social','Profissionalizar o Instagram','Perfil organizado e conteúdo que passa confiança'],['sistema','Um sistema sob medida','Para a empresa, para aulas ou para a vida pessoal']]},
+ {id:'site',if:'site',q:'Que tipo de site você imagina?',h:'Se tiver dúvida, escolha "Ainda não sei".',o:[['bio','Página de link na bio','Seus principais links e contatos em uma página, para usar no Instagram'],['one','Site de uma página (one page)','Tudo sobre o seu negócio em uma página só'],['landing','Landing page','Uma página focada em vender um produto, curso ou serviço'],['port','Portfólio','Para mostrar seus trabalhos e projetos'],['inst','Site institucional','Várias páginas: início, sobre, serviços e contato'],['naosei','Ainda não sei','A gente te ajuda a escolher']]},
+ {id:'google',if:'google',q:'Como está a sua empresa no Google hoje?',o:[['zero','Ainda não aparece no Google','Vamos criar o seu perfil do zero'],['otim','Já aparece, mas está incompleto','Vamos melhorar o perfil que já existe'],['gestao','Quero alguém cuidando do perfil todo mês','Avaliações respondidas, fotos e informações sempre atualizadas']]},
+ {id:'social',if:'social',q:'O que você precisa no Instagram?',o:[['org','Organizar o meu perfil','Bio, destaques e algumas artes para começar'],['ess','Postagens todo mês','Até 8 posts por mês com arte e legenda, mais stories'],['comp','Postagens e stories toda semana','Até 12 posts por mês, stories 3 vezes por semana e relatório']]},
+ {id:'sistema',if:'sistema',q:'Que tipo de sistema você precisa?',o:[['simples','Algo simples para o dia a dia','Uma ou duas telas, como controle de clientes, finanças, rotina, hábitos ou aulas'],['empresa','Um sistema completo para a empresa','Vários usuários, cadastros, financeiro e relatórios']]},
+ {id:'seg',q:'Qual é o segmento da sua empresa?',o:['Alimentação','Saúde e estética','Beleza','Comércio','Prestação de serviços','Profissional liberal','Educação','Cursos e infoprodutos','Uso pessoal','Outro'].map(x=>[x,x])},
+ {id:'mom',q:'Em qual momento está o seu negócio?',o:['Estou começando','Já tenho uma empresa','Quero profissionalizar minha empresa'].map(x=>[x,x])},
+ {id:'ident',q:'Sua empresa já tem identidade visual?',h:'Identidade visual é o logo, as cores e o estilo da marca.',o:['Sim, já tenho','Tenho só o logo','Ainda não'].map(x=>[x,x])},
+ {id:'prazo',q:'Para quando você precisa?',o:['Sem pressa','Ainda este mês','É urgente'].map(x=>[x,x])},
+ {id:'fim',q:'Tudo pronto!',h:'Para ver o valor, suas respostas são enviadas para o nosso WhatsApp. Assim a gente já consegue tirar qualquer dúvida com você.'}
+];
+const $=id=>document.getElementById(id);
+const form=$('wiz');
+const lbl=(s,v)=>(s.o.find(o=>o[0]===v)||[])[1];
+const sid=(()=>{try{return crypto.randomUUID()}catch(e){return 'x'+Date.now()+Math.random().toString(16).slice(2)}})();
+const fields={
+ contato:`<div class="fields"><label for="f-nome">Seu nome<input id="f-nome" autocomplete="name" required></label><label for="f-wa">WhatsApp com DDD<input id="f-wa" type="tel" inputmode="tel" autocomplete="tel" placeholder="(47) 99999-9999" required></label><label for="f-ig">Instagram (opcional)<input id="f-ig" placeholder="@suaempresa" autocapitalize="off"></label><label for="f-mail">E-mail (opcional)<input id="f-mail" type="email" inputmode="email" autocomplete="email" autocapitalize="off"></label></div><p class="hint" style="margin:16px 0 0;font-size:14px">Ao continuar, você concorda com a nossa <a href="privacidade.html">política de privacidade</a>.</p>`,
+ fim:`<div class="fields"><label for="f-emp">Nome da empresa (opcional)<input id="f-emp" autocomplete="organization"></label></div>`
+};
+form.innerHTML=S.map(s=>`<fieldset class="stepq" id="s-${s.id}" style="border:0;margin:0;padding:0"><legend style="padding:0"><h2>${s.q}</h2></legend>${s.h?`<p class="hint">${s.h}</p>`:'<div style="height:14px"></div>'}${fields[s.id]||`<div class="choices">${s.o.map(o=>`<label><input type="${s.multi?'checkbox':'radio'}" name="${s.id}" value="${o[0]}">${o[1]}${o[2]?`<small>${o[2]}</small>`:''}</label>`).join('')}</div>`}<p class="err" id="e-${s.id}"></p><div class="nav">${s.id==='contato'?'<span></span>':'<button class="btn btn-line" type="button" data-back>Voltar</button>'}${s.id==='fim'?'<a class="btn btn-gold" id="go" href="#" target="_blank" rel="noopener">Ver meu orçamento</a>':'<button class="btn btn-gold" type="button" data-next>Continuar</button>'}</div></fieldset>`).join('');
+const needs=()=>[...form.querySelectorAll('input[name=need]:checked')].map(i=>i.value);
+const val=n=>(form.querySelector(`input[name="${n}"]:checked`)||{}).value;
+const v=id=>$(id).value.trim();
+const digits=()=>v('f-wa').replace(/\D/g,'');
+const flow=()=>S.filter(s=>!s.if||needs().includes(s.if));
+let cur='contato',savedContact=false;
+const show=id=>{
+ cur=id;const f=flow(),i=f.findIndex(s=>s.id===id);
+ S.forEach(s=>$('s-'+s.id).classList.toggle('on',s.id===id));
+ $('bar').style.width=((i+1)/f.length*100)+'%';
+ $('count').textContent=`Etapa ${i+1} de ${f.length}`;
+};
+const ok=id=>{
+ let m='';
+ if(id==='contato'){
+  if(!v('f-nome'))m='Digite o seu nome.';
+  else if(digits().length<10||digits().length>13)m='Digite um WhatsApp válido, com DDD.';
+  else if(v('f-mail')&&!/^\S+@\S+\.\S+$/.test(v('f-mail')))m='Confira o e-mail digitado.';
+ }
+ else if(id==='need'&&!needs().length)m='Escolha pelo menos uma opção.';
+ else if(id!=='need'&&id!=='fim'&&S.find(s=>s.id===id).o&&!val(id))m='Escolha uma opção para continuar.';
+ $('e-'+id).textContent=m;return !m;
+};
+const contact=()=>({sessao:sid,nome:v('f-nome'),whatsapp:digits(),instagram:v('f-ig')||null,email:v('f-mail')||null,pagina:location.hash.slice(1)||null});
+const next=()=>{
+ if(!ok(cur))return;
+ if(cur==='contato'&&!savedContact){savedContact=true;window.saveLead&&window.saveLead({...contact(),etapa:'contato'})}
+ const f=flow();show(f[f.findIndex(s=>s.id===cur)+1].id);$('wiz').scrollIntoView({block:'nearest'});
+};
+const back=()=>{const f=flow();show(f[Math.max(0,f.findIndex(s=>s.id===cur)-1)].id)};
+const calc=()=>{
+ let once=0,month=0;const items=[];
+ ['site','google','social','sistema'].forEach(k=>{
+  if(!needs().includes(k))return;const x=val(k),p=PRICE[k][x];if(p==null)return;
+  const name=lbl(S.find(s=>s.id===k),x);
+  if(Array.isArray(p)){month+=p[0];items.push([name,brl(p[0])+'/mês'])}else{once+=p;items.push([name,(k==='sistema'?'a partir de ':'')+brl(p)])}
+ });
+ return {once,month,items};
+};
+const est=r=>(r.once?'a partir de '+brl(r.once):'')+(r.once&&r.month?' + ':'')+(r.month?brl(r.month)+'/mês':'');
+const message=r=>['Olá! Fiz a simulação de orçamento no site da MaweCreate.','',`Nome: ${v('f-nome')}`,v('f-emp')?`Empresa: ${v('f-emp')}`:null,`WhatsApp: ${v('f-wa')}`,v('f-ig')?`Instagram: ${v('f-ig')}`:null,v('f-mail')?`E-mail: ${v('f-mail')}`:null,`Segmento: ${val('seg')}`,`Momento: ${val('mom')}`,`Identidade visual: ${val('ident')}`,`Prazo: ${val('prazo')}`,'','Preciso de:',...r.items.map(i=>`- ${i[0]}`),'',`Estimativa: ${est(r)}`].filter(l=>l!==null).join('\n');
+const update=()=>{$('go').href=`https://wa.me/${WA}?text=${encodeURIComponent(message(calc()))}`};
+form.addEventListener('click',e=>{
+ if(e.target.closest('[data-next]'))next();
+ if(e.target.closest('[data-back]'))back();
+ if(e.target.closest('#go')){
+  update();
+  const r=calc();
+  window.saveLead&&window.saveLead({...contact(),etapa:'concluido',empresa:v('f-emp')||null,servicos:r.items.map(i=>i[0]).join(', '),respostas:{segmento:val('seg'),momento:val('mom'),identidade:val('ident'),prazo:val('prazo'),site:val('site')||null,google:val('google')||null,social:val('social')||null,sistema:val('sistema')||null},estimativa_unica:r.once,estimativa_mensal:r.month});
+  $('d-total').textContent=r.once?brl(r.once):brl(r.month)+'/mês';
+  $('d-k').textContent=r.once?'Estimativa para o seu projeto, a partir de':'Estimativa mensal para o seu projeto';
+  $('d-month').textContent=r.once&&r.month?'+ '+brl(r.month)+' por mês':'';
+  $('d-items').innerHTML=r.items.map(i=>`<li><span>${i[0]}</span><span>${i[1]}</span></li>`).join('');
+  let tip='';
+  if(val('site')==='one'&&val('google')==='zero'&&needs().includes('site')&&needs().includes('google'))tip='Dica: no pacote Presença Essencial (R$ 1.200) você leva o site one page, o Google, 30 dias de suporte e 1 mês de gestão do Google.';
+  else if(val('ident')==='Ainda não')tip='A criação de logo e identidade visual é orçada à parte. A gente explica tudo na conversa.';
+  $('d-tip').textContent=tip;
+  $('d-wa').href=$('go').href;
+  form.hidden=true;$('bar').style.width='100%';$('count').textContent='Pronto! Sua mensagem foi aberta no WhatsApp.';
+  $('done').classList.add('on');
+ }
+});
+form.addEventListener('change',e=>{
+ const s=S.find(x=>x.id===e.target.name);$('e-'+cur).textContent='';
+ if(s&&!s.multi)setTimeout(next,220);
+});
+form.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'&&e.target.type!=='checkbox'&&e.target.type!=='radio'){e.preventDefault();if(cur!=='fim')next()}});
+$('d-reset').addEventListener('click',()=>{form.querySelectorAll('input[type=radio],input[type=checkbox]').forEach(i=>i.checked=false);form.hidden=false;$('done').classList.remove('on');show('need');window.scrollTo(0,0)});
+const pre=location.hash.slice(1);
+const pi=form.querySelector(`input[name=need][value="${pre}"]`);if(pi)pi.checked=true;
+show('contato');
+}
+</script>
+<script src="assets/site.js" defer></script>
+<div class="cookie" id="cookie" role="dialog" aria-label="Aviso de cookies" hidden>
+ <strong>Este site usa cookies</strong>
+ <p>Usamos cookies para entender como o site é usado e melhorar a sua experiência. Saiba mais na nossa <a href="privacidade.html">política de privacidade</a>.</p>
+ <div class="row"><button class="btn btn-gold" type="button" data-c="aceito">Aceitar</button><button class="btn btn-line" type="button" data-c="recusado">Recusar</button></div>
+</div>
+</body>
+</html>

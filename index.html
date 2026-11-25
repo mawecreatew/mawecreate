@@ -1,597 +1,221 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mawe Create | Sites que trazem clientes</title>
-<meta name="description" content="Sites feitos para trazer clientes e vendas para pequenos negócios. Peça um orçamento grátis do site da sua empresa, com atendimento 100% online.">
-<meta property="og:title" content="Mawe Create | Sites que trazem clientes">
-<meta property="og:description" content="Sites feitos para trazer clientes e vendas. Atendimento 100% online para todo o Brasil.">
-<meta property="og:image" content="https://www.mawecreate.com.br/simbolo-mawe.png">
-<link rel="icon" type="image/png" href="simbolo-mawe.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaweCreate | Criação de sites, Google Meu Negócio e Social Media</title>
+<meta name="description" content="Sites profissionais, Google Meu Negócio, social media e sistemas personalizados. Atendimento 100% online para todo o Brasil.">
+<link rel="canonical" href="https://mawecreate.com.br/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1b1310">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="MaweCreate">
+<meta property="og:title" content="MaweCreate | Criação de sites, Google Meu Negócio e Social Media">
+<meta property="og:description" content="Sites profissionais, Google Meu Negócio, social media e sistemas personalizados. Atendimento 100% online para todo o Brasil.">
+<meta property="og:url" content="https://mawecreate.com.br/">
+<meta property="og:image" content="https://mawecreate.com.br/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@300;400;500;600&display=swap">
-<style>
-:root {
-  --brown: #2A211C;
-  --brown-2: #362B24;
-  --brown-3: #45382F;
-  --cream: #EFE9DD;
-  --cream-2: #E4DBCB;
-  --gold: #B08D57;
-  --gold-soft: #C9A672;
-  --gold-ink: #7A5C2E;
-  --muted-on-dark: #CFC6B8;
-  --muted-on-light: #5A4D43;
-  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --sans: 'DM Sans', 'Avenir Next', 'Helvetica Neue', system-ui, sans-serif;
-  --gutter: max(16px, env(safe-area-inset-left, 0px));
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--brown); color: var(--cream); font-family: var(--sans); font-size: 17px; line-height: 1.6; font-weight: 400; }
-img { max-width: 100%; display: block; }
-a { color: inherit; }
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
-h1, h2, h3 { font-family: var(--serif); font-weight: 600; margin: 0; line-height: 1.02; text-wrap: balance; letter-spacing: -0.01em; }
-p { margin: 0; }
-
-.band { padding: 104px var(--gutter); }
-.band.light { background: var(--cream); color: var(--brown); }
-.band.dark { background: var(--brown); color: var(--cream); }
-.wrap { max-width: 1160px; margin: 0 auto; }
-.section-title { font-size: clamp(38px, 5.6vw, 64px); max-width: 16ch; }
-.section-intro { font-size: 19px; max-width: 54ch; margin-top: 20px; }
-.light .section-intro { color: var(--muted-on-light); }
-.dark .section-intro { color: var(--muted-on-dark); }
-
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 30px; border-radius: 999px; font: 500 16px/1 var(--sans); text-decoration: none; border: 1px solid var(--gold); cursor: pointer; transition: background .2s ease, color .2s ease, transform .15s ease; }
-.btn:active { transform: translateY(1px); }
-.btn-gold { background: var(--gold); color: var(--brown); }
-.btn-gold:hover { background: var(--gold-soft); }
-.btn-line { background: transparent; color: inherit; }
-.dark .btn-line:hover, .hero .btn-line:hover { background: rgba(176,141,87,.16); }
-.light .btn-line { border-color: var(--brown); }
-.light .btn-line:hover { background: var(--brown); color: var(--cream); }
-.btn svg { width: 20px; height: 20px; flex: none; }
-
-/* Topo */
-.topbar { position: sticky; top: 0; z-index: 20; background: rgba(42,33,28,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(176,141,87,.22); padding: 14px var(--gutter); }
-.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand-arch { width: 28px; height: 36px; border: 1.5px solid var(--gold); border-bottom: 0; border-radius: 14px 14px 0 0; display: grid; place-items: center; padding-top: 6px; font: 600 18px/1 var(--serif); }
-.brand-name { font: 500 18px/1 var(--sans); letter-spacing: .04em; }
-.brand-name span { color: var(--gold); font-weight: 300; }
-.nav { display: flex; align-items: center; gap: 28px; font-size: 15px; }
-.nav a { text-decoration: none; color: var(--muted-on-dark); }
-.nav a:hover { color: var(--cream); }
-.nav .btn { min-height: 42px; padding: 0 20px; font-size: 15px; color: var(--brown); }
-@media (max-width: 820px) { .nav a:not(.btn) { display: none; } }
-
-/* Hero */
-.hero { padding: 72px var(--gutter) 112px; position: relative; overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 64px; align-items: center; }
-.hero h1 { font-size: clamp(42px, 5.8vw, 78px); line-height: 1.04; max-width: 15ch; }
-.hero-sub { font-size: 20px; color: var(--muted-on-dark); max-width: 46ch; margin-top: 28px; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
-.hero-facts { list-style: none; padding: 0; margin: 44px 0 0; display: flex; flex-wrap: wrap; gap: 12px 32px; font-size: 15px; color: var(--muted-on-dark); }
-.hero-facts li { display: flex; align-items: center; gap: 10px; }
-.hero-facts li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
-
-/* Janela em arco que mostra os sites */
-.stage { position: relative; justify-self: center; width: min(100%, 400px); aspect-ratio: 4 / 5.2; }
-.stage svg.arch-line { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.arch-line path { fill: none; stroke: var(--gold); stroke-width: 1.6; }
-.arch-line .outer { stroke-dasharray: 1600; stroke-dashoffset: 1600; animation: draw 1.6s cubic-bezier(.6,.1,.2,1) .15s forwards; }
-.arch-line .inner { stroke-opacity: .35; stroke-dasharray: 1500; stroke-dashoffset: 1500; animation: draw 1.6s cubic-bezier(.6,.1,.2,1) .45s forwards; }
-@keyframes draw { to { stroke-dashoffset: 0; } }
-.window { position: absolute; inset: 9.5% 9% 0; border-radius: 999px 999px 0 0; overflow: hidden; background: var(--brown-2); opacity: 0; animation: rise .9s ease 1.3s forwards; }
-@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-.slide { position: absolute; inset: 0; opacity: 0; transition: opacity .9s ease; }
-.slide.on { opacity: 1; }
-.stage-caption { position: absolute; left: 0; right: 0; bottom: -46px; text-align: center; font-size: 14px; color: var(--muted-on-dark); opacity: 0; animation: rise .8s ease 1.8s forwards; }
-.stage-caption b { color: var(--cream); font-weight: 500; }
-
-@media (max-width: 900px) {
-  .hero { padding-top: 48px; padding-bottom: 120px; }
-  .hero .wrap { grid-template-columns: 1fr; gap: 72px; }
-  .stage { width: min(82%, 340px); }
-}
-
-/* Mini site (usado no arco e nos cards) */
-.mini { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 22% 12% 12%; text-align: left; }
-.mini .m-nav { position: absolute; top: 15%; left: 12%; right: 12%; display: flex; justify-content: space-between; align-items: center; font-size: 10px; letter-spacing: .08em; opacity: .75; }
-.mini .m-nav i { display: block; width: 26px; height: 2px; background: currentColor; box-shadow: 0 -5px 0 currentColor, 0 5px 0 currentColor; transform: scale(.7); transform-origin: right; }
-.mini .m-kind { font-size: 12px; opacity: .8; margin-bottom: 10px; }
-.mini .m-title { font-family: var(--m-font, var(--serif)); font-size: clamp(28px, 3.4vw, 40px); line-height: 1; font-weight: var(--m-weight, 600); }
-.mini .m-line { font-size: 13px; line-height: 1.45; opacity: .85; margin-top: 12px; max-width: 26ch; }
-.mini .m-cta { margin-top: 18px; align-self: flex-start; font-size: 12px; font-weight: 500; padding: 9px 16px; border-radius: 999px; background: var(--m-accent); color: var(--m-accent-ink, #fff); }
-.mini .m-shape { position: absolute; border-radius: 50%; filter: blur(2px); opacity: .55; }
-
-.p-jakeline { background: radial-gradient(120% 80% at 80% 10%, #4A4F55 0%, #24272B 62%); color: #F2EEF0; --m-accent: #E8559B; --m-accent-ink: #FFFFFF; --m-font: var(--sans); --m-weight: 500; }
-.p-framboesa { background: radial-gradient(120% 80% at 75% 5%, #5A2440 0%, #1E1418 62%); color: #F4FBF6; --m-accent: #FF7AB6; --m-accent-ink: #1E1418; --m-font: Georgia, 'Times New Roman', serif; --m-weight: 700; }
-.work .real-tag { position: absolute; left: 50%; top: 18px; transform: translateX(-50%); white-space: nowrap; padding: 7px 13px; border-radius: 999px; background: var(--gold); color: var(--brown); font-size: 13px; font-weight: 500; }
-.p-vitta { background: linear-gradient(160deg, #F4E4DD 0%, #E9CFC4 100%); color: #3B2A27; --m-accent: #3B2A27; --m-font: var(--sans); --m-weight: 500; }
-.p-nexa { background: linear-gradient(170deg, #17324D 0%, #0F2236 100%); color: #EAF1F7; --m-accent: #E7B54A; --m-accent-ink: #0F2236; --m-font: var(--sans); --m-weight: 600; }
-.p-luna { background: linear-gradient(180deg, #D9D3C9 0%, #BDB4A6 100%); color: #26231F; --m-accent: #26231F; }
-.p-onda { background: linear-gradient(150deg, #FF6B3D 0%, #E8336D 55%, #6A2C91 100%); color: #FFF6EE; --m-accent: #FFF6EE; --m-accent-ink: #6A2C91; --m-font: var(--sans); --m-weight: 600; }
-.p-summita { background: linear-gradient(165deg, #10151C 0%, #1D2A38 100%); color: #EDEFF2; --m-accent: #5FB3A1; --m-accent-ink: #10151C; --m-font: var(--sans); --m-weight: 500; }
-.p-house { background: radial-gradient(110% 80% at 70% 0%, #6B2A16 0%, #2B140C 65%); color: #FFF1E2; --m-accent: #F2A33A; --m-accent-ink: #2B140C; --m-font: var(--sans); --m-weight: 600; }
-
-/* Cliente real */
-.case { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 72px; align-items: center; }
-.case-visual { display: block; position: relative; aspect-ratio: 4 / 5; max-width: 420px; width: 100%; justify-self: center; }
-.case-visual .frame { position: absolute; inset: 0; border-radius: 999px 999px 0 0; overflow: hidden; }
-.case-visual::after { content: ""; position: absolute; inset: -14px -14px 0; border: 1px solid var(--gold-ink); border-bottom: 0; border-radius: 999px 999px 0 0; opacity: .5; pointer-events: none; }
-.case-tag { display: inline-block; font-size: 15px; font-weight: 500; color: var(--gold-ink); margin-bottom: 18px; }
-.case h2 { font-size: clamp(40px, 5.4vw, 62px); }
-.case p.lead { font-size: 19px; color: var(--muted-on-light); margin-top: 22px; max-width: 48ch; }
-.case-points { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 14px; }
-.case-points li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; }
-.case-points svg { width: 22px; height: 22px; color: var(--gold-ink); margin-top: 3px; }
-.quote { margin: 36px 0 0; padding: 26px 28px; border-left: 2px solid var(--gold); background: var(--cream-2); border-radius: 0 14px 14px 0; font-family: var(--serif); font-size: 24px; line-height: 1.35; font-style: italic; }
-.quote cite { display: block; margin-top: 12px; font: 400 15px/1.4 var(--sans); font-style: normal; color: var(--muted-on-light); }
-@media (max-width: 900px) { .case { grid-template-columns: 1fr; gap: 56px; } .case-visual { max-width: 320px; } }
-
-/* Trabalhos */
-.work-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 48px; }
-.work-hint { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--muted-on-light); max-width: 34ch; }
-.work-hint svg { width: 34px; height: 34px; flex: none; color: var(--gold-ink); }
-.work-grid { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 32px; }
-.work { text-decoration: none; color: var(--brown); display: flex; flex-direction: column; gap: 18px; }
-.work-screen { position: relative; aspect-ratio: 4 / 4.6; border-radius: 200px 200px 18px 18px; overflow: hidden; box-shadow: 0 30px 50px -36px rgba(42,33,28,.7); transition: transform .45s cubic-bezier(.2,.7,.2,1); }
-.work-screen .open { position: absolute; right: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--cream); color: var(--brown); font-size: 14px; font-weight: 500; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: background .2s ease, color .2s ease; }
-.work-screen .open svg { width: 16px; height: 16px; }
-.work:hover .work-screen { transform: translateY(-6px); }
-.work:hover .open { background: var(--brown); color: var(--cream); }
-.work-info h3 { font-size: 28px; }
-.work-info p { font-size: 15px; color: var(--muted-on-light); margin-top: 6px; }
-.work-info .kind { font-size: 14px; font-weight: 500; color: var(--gold-ink); }
-.work-note { margin-top: 48px; font-size: 14px; color: var(--muted-on-light); }
-@media (max-width: 900px) { .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .work-grid { grid-template-columns: 1fr; } .work-screen { aspect-ratio: 4 / 4; } }
-
-/* Serviços */
-.services { margin-top: 64px; border-top: 1px solid rgba(176,141,87,.35); }
-.service { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) auto; gap: 16px 48px; align-items: baseline; padding: 34px 0; border-bottom: 1px solid rgba(176,141,87,.35); }
-.service h3 { font-size: clamp(30px, 3.6vw, 42px); }
-.service p { color: var(--muted-on-dark); max-width: 52ch; }
-.service .for { font-size: 14px; color: var(--gold-soft); white-space: nowrap; }
-@media (max-width: 760px) { .service { grid-template-columns: 1fr; gap: 10px; } .service .for { white-space: normal; } }
-
-/* Quem somos */
-.about { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 72px; align-items: center; }
-.about p { font-size: 19px; color: var(--muted-on-light); margin-top: 22px; max-width: 54ch; }
-.about-mark { justify-self: center; width: min(100%, 300px); aspect-ratio: 360 / 450; border-radius: 999px 999px 0 0; background: var(--brown); position: relative; display: grid; place-items: center; }
-.about-mark svg { width: 100%; height: 100%; }
-.promise { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.promise strong { display: block; font: 600 30px/1.1 var(--serif); color: var(--brown); }
-.promise span { font-size: 15px; color: var(--muted-on-light); }
-@media (max-width: 900px) { .about { grid-template-columns: 1fr; gap: 48px; } .about-mark { width: min(70%, 240px); } }
-@media (max-width: 520px) { .promise { grid-template-columns: 1fr; gap: 18px; } }
-
-/* Dúvidas */
-.faq { margin-top: 48px; max-width: 820px; }
-.faq details { border-bottom: 1px solid rgba(122,92,46,.3); }
-.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font: 600 clamp(22px, 2.6vw, 27px)/1.25 var(--serif); }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary .plus { position: relative; width: 18px; height: 18px; flex: none; }
-.faq summary .plus::before, .faq summary .plus::after { content: ""; position: absolute; left: 0; top: 8px; width: 18px; height: 1.6px; background: var(--gold-ink); transition: transform .3s ease; }
-.faq summary .plus::after { transform: rotate(90deg); }
-.faq details[open] .plus::after { transform: rotate(0deg); }
-.faq .answer { padding: 0 0 26px; color: var(--muted-on-light); max-width: 64ch; }
-.faq .answer p + p { margin-top: 10px; }
-
-/* Orçamento */
-.cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; }
-.cta h2 { font-size: clamp(42px, 6vw, 72px); }
-.cta .section-intro { margin-top: 24px; }
-.steps { list-style: none; counter-reset: s; padding: 0; margin: 36px 0 0; display: grid; gap: 16px; }
-.steps li { counter-increment: s; display: grid; grid-template-columns: 36px 1fr; gap: 14px; color: var(--muted-on-dark); }
-.steps li::before { content: counter(s); width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--gold); display: grid; place-items: center; font: 600 17px/1 var(--serif); color: var(--gold); }
-.steps b { color: var(--cream); font-weight: 500; }
-form.request { background: var(--brown-2); border: 1px solid rgba(176,141,87,.3); border-radius: 28px; padding: 36px; display: grid; gap: 22px; }
-.field { display: grid; gap: 8px; }
-.field label { font-size: 15px; font-weight: 500; }
-.field .opt { color: var(--muted-on-dark); font-weight: 400; }
-.field input, .field select { width: 100%; min-height: 54px; padding: 0 18px; border-radius: 14px; border: 1px solid rgba(207,198,184,.28); background: var(--brown); color: var(--cream); font: 400 17px var(--sans); appearance: none; -webkit-appearance: none; }
-.field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23B08D57' stroke-width='1.6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 18px center; padding-right: 44px; }
-.field input::placeholder { color: #8E8276; }
-.field input:focus, .field select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(176,141,87,.25); }
-.field .error { display: none; font-size: 14px; color: #E7A58C; }
-.field.invalid input { border-color: #E7A58C; }
-.field.invalid .error { display: block; }
-form.request .btn { width: 100%; margin-top: 4px; }
-.form-note { font-size: 14px; color: var(--muted-on-dark); text-align: center; }
-@media (max-width: 900px) { .cta { grid-template-columns: 1fr; gap: 48px; } form.request { padding: 26px 20px; } }
-
-/* Rodapé */
-footer { padding: 64px var(--gutter) 120px; border-top: 1px solid rgba(176,141,87,.22); }
-footer .wrap { display: grid; grid-template-columns: 1.2fr repeat(3, minmax(0, 1fr)); gap: 32px; }
-footer .tagline { color: var(--muted-on-dark); font-size: 15px; margin-top: 14px; max-width: 30ch; }
-footer h4 { margin: 0 0 8px; font: 500 14px/1.4 var(--sans); color: var(--gold); }
-footer a { text-decoration: none; overflow-wrap: anywhere; }
-footer a:hover { color: var(--gold-soft); }
-footer .copy { grid-column: 1 / -1; margin-top: 24px; font-size: 13px; color: #8E8276; }
-@media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr; } }
-
-/* Botão flutuante de WhatsApp */
-.float-wa { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 30; display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 22px 0 18px; border-radius: 999px; background: var(--gold); color: var(--brown); font: 500 15px/1 var(--sans); text-decoration: none; box-shadow: 0 14px 30px -10px rgba(0,0,0,.55); transform: translateY(120%); opacity: 0; transition: transform .4s cubic-bezier(.2,.7,.2,1), opacity .4s ease; }
-.float-wa.show { transform: none; opacity: 1; }
-.float-wa svg { width: 22px; height: 22px; }
-@media (max-width: 480px) { .float-wa span { display: none; } .float-wa { padding: 0 17px; } }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .arch-line .outer, .arch-line .inner { animation: none; stroke-dashoffset: 0; }
-  .window, .stage-caption { animation: none; opacity: 1; }
-  .slide { transition: none; }
-  .work-screen, .float-wa { transition: none; }
-}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://mawecreate.com.br/#empresa", "name": "MaweCreate", "alternateName": "Mawe Create", "slogan": "Sua marca merece ir além.", "description": "Agência digital que cria sites profissionais, cuida do Google Meu Negócio, faz social media e desenvolve sistemas personalizados, com atendimento 100% online para todo o Brasil.", "url": "https://mawecreate.com.br/", "logo": "https://mawecreate.com.br/assets/simbolo-mawe.png", "image": "https://mawecreate.com.br/assets/og.jpg", "telephone": "+55 47 99208-8468", "email": "contato@mawecreate.com.br", "address": {"@type": "PostalAddress", "addressLocality": "Brusque", "addressRegion": "SC", "addressCountry": "BR"}, "areaServed": {"@type": "Country", "name": "Brasil"}, "founder": [{"@type": "Person", "name": "Maria Eduarda"}, {"@type": "Person", "name": "Wesley"}], "sameAs": ["https://instagram.com/mawecreate"], "knowsAbout": ["Criação de sites", "Landing page", "Google Meu Negócio", "Social media", "Sistemas personalizados", "Sistemas educacionais"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quanto custa criar um site?", "acceptedAnswer": {"@type": "Answer", "text": "Depende do tipo de site e do que ele precisa ter. Use o simulador acima para ver um valor aproximado na hora."}}, {"@type": "Question", "name": "Quanto tempo leva para ficar pronto?", "acceptedAnswer": {"@type": "Answer", "text": "Um site one page fica pronto em cerca de 7 dias úteis, e um site institucional em cerca de 12 dias úteis. O prazo exato vai na proposta."}}, {"@type": "Question", "name": "Vocês fazem sites personalizados?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Cada site é criado do zero, com a identidade e o objetivo do seu negócio."}}, {"@type": "Question", "name": "O site funciona no celular?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Todos os projetos são pensados primeiro para o celular, que é onde a maioria dos seus clientes vai acessar."}}, {"@type": "Question", "name": "Vocês cuidam do domínio e da publicação?", "acceptedAnswer": {"@type": "Answer", "text": "O domínio fica no seu nome e custa cerca de R$ 40 por ano no Registro.br. Se preferir, fazemos o cadastro por uma taxa de R$ 25, e a publicação do site fica por nossa conta."}}, {"@type": "Question", "name": "Como funciona o serviço de Google Meu Negócio?", "acceptedAnswer": {"@type": "Answer", "text": "Criamos ou melhoramos o perfil da sua empresa com fotos, horários e serviços. Também temos um plano mensal para responder avaliações e manter tudo atualizado."}}, {"@type": "Question", "name": "Vocês criam conteúdo para Instagram?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Organizamos o perfil e temos planos mensais com artes, legendas, stories e calendário de conteúdo."}}, {"@type": "Question", "name": "Posso pedir alterações?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Todo projeto inclui até 2 rodadas de ajustes antes da entrega."}}, {"@type": "Question", "name": "Depois da entrega, vocês oferecem suporte?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Temos planos mensais de manutenção do site e de gestão do Google para quem quer seguir com a gente."}}, {"@type": "Question", "name": "Vocês atendem fora da minha cidade?", "acceptedAnswer": {"@type": "Answer", "text": "Atendemos todo o Brasil. Todo o processo é 100% online, pelo WhatsApp e por videochamada."}}]}</script>
 </head>
 <body>
-
-<header class="topbar">
-  <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Mawe Create, voltar ao início">
-      <span class="brand-arch" aria-hidden="true">M</span>
-      <span class="brand-name">MAWE <span>CREATE</span></span>
-    </a>
-    <nav class="nav" aria-label="Seções do site">
-      <a href="#trabalhos">Trabalhos</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#duvidas">Dúvidas</a>
-      <a class="btn btn-gold" href="#orcamento">Orçamento grátis</a>
-    </nav>
-  </div>
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="brand" href="#inicio" aria-label="MaweCreate, página inicial"><img src="assets/simbolo-mawe.png" alt="" width="34" height="42"><span><b>MAWE</b><i>CREATE</i></span></a>
+  <nav id="nav" aria-label="Menu principal">
+   <div class="dd" id="dd"><button class="ddb" id="ddb" type="button" aria-expanded="false" aria-controls="ddm">Serviços</button><div class="ddm" id="ddm"><a href="criacao-de-sites.html"><b>Criação de sites</b><small>One page, landing page, institucional e link na bio</small></a><a href="google-meu-negocio.html"><b>Google Meu Negócio</b><small>Apareça no Google e no Maps</small></a><a href="social-media.html"><b>Social Media</b><small>Instagram organizado e conteúdo todo mês</small></a><a href="sistemas-personalizados.html"><b>Sistemas personalizados</b><small>Gestão, educação e organização pessoal</small></a></div></div>
+   <a href="projetos.html">Projetos</a><a href="sobre.html">Sobre</a><a href="blog.html">Blog</a><a href="#duvidas">Dúvidas</a><a class="navcta" href="orcamento.html">Simular orçamento</a>
+  </nav>
+  <a class="btn btn-line" href="orcamento.html">Simular orçamento</a>
+  <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+ </div>
 </header>
+<main>
+<section class="hero" id="inicio">
+ <div class="mark" aria-hidden="true">MAWE</div>
+ <div class="wrap">
+  <div>
+   <div class="eyebrow">Agência digital</div>
+   <h1>Sua empresa merece uma presença digital à altura do <span class="serif">seu negócio.</span></h1>
+   <p class="lead">Criamos experiências digitais que fazem o seu negócio ser encontrado, lembrado e escolhido. Sua marca merece ir além.</p>
+   <div class="ctas">
+    <a class="btn btn-gold" href="orcamento.html">Quero profissionalizar minha empresa</a>
+    <a class="btn btn-line" href="#projetos">Ver projetos realizados</a>
+   </div>
+   <p class="tags">Sites profissionais<b>•</b>Google<b>•</b>Social Media<b>•</b>Sistemas</p>
+  </div>
+  <div class="stage" aria-label="Sites criados pela MaweCreate">
+   <div class="arch"></div>
+   <div class="phone p1"><img src="assets/framboesa.webp" alt="Site da Dona Framboesa no celular"></div>
+   <div class="phone p3"><img src="assets/brasa.webp" alt="Site da Brasa Bruta no celular"></div>
+   <div class="phone p2"><img src="assets/house.webp" alt="Site da The House Burguer e Pizza no celular, com nota 4,9 no Google"></div>
+  </div>
+ </div>
+</section>
 
-<main id="inicio">
+<section class="band light" id="problemas">
+ <div class="wrap">
+  <div class="head">
+   <h2>Seu negócio está presente no digital ou está deixando oportunidades passarem?</h2>
+  </div>
+  <div class="grid2">
+   <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg></div><h3>Seu negócio não tem um site profissional?</h3><p class="mute">Seus clientes procuram sua empresa, mas não encontram um lugar para conhecer seus serviços.</p></div>
+   <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><h3>Sua empresa não aparece no Google?</h3><p class="mute">Pessoas próximas procuram pelos seus serviços, mas sua empresa não ganha a visibilidade que poderia.</p></div>
+   <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></div><h3>Seu Instagram não transmite profissionalismo?</h3><p class="mute">Sua empresa tem qualidade, mas sua comunicação digital não demonstra isso.</p></div>
+   <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>Sua operação ainda depende de processos manuais?</h3><p class="mute">Falta organização, praticidade e ferramentas para facilitar o dia a dia.</p></div>
+  </div>
+  <div class="close"><p>Nós podemos ajudar a resolver tudo isso.</p><a class="btn btn-gold" href="#servicos">Descobrir como</a></div>
+ </div>
+</section>
 
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap">
-      <div>
-        <h1 id="hero-title">Sites feitos para trazer clientes e vendas para o seu negócio.</h1>
-        <p class="hero-sub">Seu cliente procura no Google, encontra o seu site e chama você no WhatsApp. A gente cria esse caminho do zero, com a cara da sua empresa e atendimento 100% online.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="#orcamento">Quero um orçamento grátis</a>
-          <a class="btn btn-line" href="#trabalhos">Ver trabalhos</a>
-        </div>
-        <ul class="hero-facts">
-          <li>Pronto em 5 a 12 dias úteis</li>
-          <li>Sem reunião presencial</li>
-          <li>Pagamento por Pix</li>
-        </ul>
-      </div>
+<section class="band" id="servicos">
+ <div class="wrap">
+  <div class="head">
+   <div class="eyebrow">Nossas soluções</div>
+   <h2>Tudo o que sua empresa precisa para ser encontrada e escolhida</h2>
+   <p class="lead">Atendemos negócios de todos os tamanhos e segmentos, sempre com o mesmo cuidado.</p>
+  </div>
+  <div class="svc">
+   <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg></div><h3>Criação de sites profissionais</h3><p class="mute">Transformamos a presença digital da sua empresa em uma experiência profissional, moderna e pensada para gerar contatos.</p><ul><li>Sites one page e institucionais</li><li>Landing pages</li><li>Sites de portfólio</li><li>Página de link na bio</li></ul><a class="link" href="criacao-de-sites.html">Quero um site profissional &rarr;</a></div>
+   <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><h3>Google Meu Negócio</h3><p class="mute">Ajudamos sua empresa a construir uma presença mais completa nas pesquisas locais e no Google Maps.</p><ul><li>Configuração e otimização do perfil</li><li>Cadastro de serviços</li><li>Fotos e informações</li><li>Estratégias para avaliações e visibilidade</li></ul><a class="link" href="google-meu-negocio.html">Quero aparecer no Google &rarr;</a></div>
+   <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></div><h3>Social Media</h3><p class="mute">Planejamos e desenvolvemos conteúdos que fortalecem a identidade da sua marca e aproximam sua empresa dos clientes.</p><ul><li>Planejamento de conteúdo</li><li>Artes e criativos</li><li>Calendário editorial</li><li>Gestão de redes sociais</li></ul><a class="link" href="social-media.html">Quero profissionalizar meu Instagram &rarr;</a></div>
+   <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>Sistemas personalizados</h3><p class="mute">Criamos ferramentas digitais para simplificar processos e organizar informações, tanto da sua empresa quanto da sua vida pessoal.</p><ul><li>Sistemas de gestão para empresas</li><li>Sistemas educacionais para professores organizarem matérias e aulas</li><li>Organização pessoal: rotina, hábitos e finanças</li><li>Agendamentos e soluções personalizadas</li></ul><a class="link" href="sistemas-personalizados.html">Quero um sistema sob medida &rarr;</a></div>
+  </div>
+ </div>
+</section>
 
-      <div class="stage" aria-hidden="true">
-        <svg class="arch-line" viewBox="0 0 400 520" preserveAspectRatio="none">
-          <path class="outer" d="M2 520 V200 A198 198 0 0 1 398 200 V520"/>
-          <path class="inner" d="M22 520 V210 A178 178 0 0 1 378 210 V520"/>
-        </svg>
-        <div class="window" id="window"></div>
-        <p class="stage-caption" id="stage-caption">Agora: <b>Jakeline Cuco</b>, massoterapia</p>
-      </div>
-    </div>
-  </section>
+<section class="band light" id="projetos">
+ <div class="wrap">
+  <div class="head">
+   <h2>Projetos realizados</h2>
+   <p class="lead">Sites de clientes e projetos conceito criados pela nossa equipe para mostrar o que dá para fazer em cada segmento.</p>
+  </div>
+  <div class="filters" id="filters"><button type="button" aria-pressed="true" data-c="Todos">Todos</button><button type="button" aria-pressed="false" data-c="Alimentação">Alimentação</button><button type="button" aria-pressed="false" data-c="Saúde e bem-estar">Saúde e bem-estar</button></div>
+  <div class="works" id="works"><article class="work"><div class="shot"><div class="phone"><img src="assets/house.webp" alt="Site The House Burguer &amp; Pizza no celular"></div></div><div class="body"><span class="badge real">Cliente</span><h3>The House Burguer &amp; Pizza</h3><span class="seg">Hamburgueria e pizzaria</span><p>Site com cardápio, avaliações e pedido pelo WhatsApp, além da gestão do perfil no Google.</p><a href="https://thehouseburgueria.com.br" target="_blank" rel="noopener">Ver site →</a></div></article><article class="work"><div class="shot"><div class="phone"><img src="assets/jakeline.webp" alt="Site Jakeline Cuco Massoterapeuta no celular"></div></div><div class="body"><span class="badge real">Cliente</span><h3>Jakeline Cuco Massoterapeuta</h3><span class="seg">Massoterapia</span><p>Identidade visual e site que transmitem calma e levam o cliente direto para o agendamento.</p><a href="https://jakelinecucomassoterapia.vercel.app" target="_blank" rel="noopener">Ver site →</a></div></article><article class="work"><div class="shot"><div class="phone"><img src="assets/brasa.webp" alt="Site Brasa Bruta no celular"></div></div><div class="body"><span class="badge">Projeto conceito</span><h3>Brasa Bruta</h3><span class="seg">Hamburgueria</span><p>Cardápio com sacola de pedidos, fotos que dão fome e envio do pedido pelo WhatsApp.</p><a href="https://brasabruta.vercel.app" target="_blank" rel="noopener">Ver site →</a></div></article><article class="work"><div class="shot"><div class="phone"><img src="assets/framboesa.webp" alt="Site Dona Framboesa no celular"></div></div><div class="body"><span class="badge">Projeto conceito</span><h3>Dona Framboesa</h3><span class="seg">Confeitaria</span><p>Vitrine de bolos por categoria, tabela de tamanhos e encomenda em poucos toques.</p><a href="https://donaframboesa.vercel.app" target="_blank" rel="noopener">Ver site →</a></div></article><article class="work"><div class="shot"><div class="phone"><img src="assets/nena.webp" alt="Site Dona Nena no celular"></div></div><div class="body"><span class="badge">Projeto conceito</span><h3>Dona Nena</h3><span class="seg">Salgados para festa</span><p>Cardápio por cento, kits prontos para festa e pedido direto pelo WhatsApp.</p><a href="https://donanena.vercel.app" target="_blank" rel="noopener">Ver site →</a></div></article></div>
+ </div>
+</section>
 
-  <section class="band light" id="cliente" aria-labelledby="case-title">
-    <div class="wrap case">
-      <a class="case-visual" href="https://thehouseburgueria.com.br/" target="_blank" rel="noopener" aria-label="Abrir o site da The House Burguer e Pizza">
-        <div class="frame">
-          <div class="mini p-house">
-            <span class="m-shape" style="width:60%;height:40%;right:-15%;top:8%;background:#F2A33A33"></span>
-            <div class="m-nav"><span>THE HOUSE</span><i></i></div>
-            <div class="m-kind">Hamburgueria e pizzaria</div>
-            <div class="m-title">The House Burguer e Pizza</div>
-            <div class="m-line">Cardápio, localização e pedido direto pelo WhatsApp.</div>
-            <span class="m-cta">Fazer pedido</span>
-          </div>
-        </div>
-      </a>
-      <div>
-        <span class="case-tag">Cliente real</span>
-        <h2 id="case-title">The House Burguer e Pizza</h2>
-        <p class="lead">Criamos o site da The House e hoje cuidamos dele todo mês. Tudo foi resolvido online, da primeira conversa até o site no ar.</p>
-        <ul class="case-points">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12.5l4.2 4.2L19 7"/></svg><span>Site próprio, com domínio da casa</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12.5l4.2 4.2L19 7"/></svg><span>Plano de manutenção mensal para atualizações e suporte</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12.5l4.2 4.2L19 7"/></svg><span>Fechado por videochamada, sem nenhuma visita presencial</span></li>
-        </ul>
-        <!--
-          DEPOIMENTO: cole aqui o texto real que a cliente mandou e tire os sinais de comentário.
-          <blockquote class="quote">
-            "Texto do depoimento da cliente."
-            <cite>Nome da cliente, The House Burguer e Pizza</cite>
-          </blockquote>
+<section class="band light" id="sobre" style="padding-top:0">
+ <div class="wrap about">
+  <div>
+   <div class="photo"><img src="assets/socios.webp" alt="Maria Eduarda e Wesley, sócios fundadores da MaweCreate"></div>
+   <p class="cap">Maria Eduarda e Wesley, sócios fundadores da MaweCreate</p>
+  </div>
+  <div>
+   <h2>Mais do que criar, queremos fazer parte da evolução do seu negócio.</h2>
+   <div class="difs">
+    <div><h3>Soluções integradas</h3><p>Site, Google, redes sociais e sistemas com um único parceiro.</p></div>
+    <div><h3>Projetos personalizados</h3><p>Cada projeto nasce do zero, pensado para o seu negócio e o seu cliente.</p></div>
+    <div><h3>Atendimento próximo</h3><p>Comunicação clara pelo WhatsApp do primeiro contato até a entrega.</p></div>
+    <div><h3>Foco na experiência</h3><p>Tudo pensado para facilitar a vida da sua empresa e de quem compra de você.</p></div>
+   </div>
+   <p class="mute" style="margin-bottom:12px">Cada projeto passa pelas nossas frentes de trabalho:</p>
+   <div class="fronts"><span>Estratégia e atendimento</span><span>Design</span><span>Desenvolvimento</span><span>Conteúdo</span></div>
+  </div>
+ </div>
+</section>
 
-          
-        -->
-        <p style="margin-top:36px"><a class="btn btn-line" href="https://thehouseburgueria.com.br/" target="_blank" rel="noopener">Ver o site da The House</a></p>
-      </div>
-    </div>
-  </section>
+<section class="band" id="como-funciona">
+ <div class="wrap">
+  <div class="head">
+   <div class="eyebrow">Como funciona</div>
+   <h2>Contratar a MaweCreate é simples</h2>
+   <p class="lead">Atendimento 100% online, para qualquer cidade do Brasil.</p>
+  </div>
+  <ol class="steps">
+   <li><h3>Você conta o que precisa</h3><p>Preenche o simulador ou chama a gente pelo WhatsApp.</p></li>
+   <li><h3>Entendemos seu negócio</h3><p>Conversamos sobre o seu segmento, seus objetivos e o que precisa melhorar.</p></li>
+   <li><h3>Apresentamos uma proposta</h3><p>Você recebe a solução recomendada, os valores e os prazos.</p></li>
+   <li><h3>Desenvolvemos seu projeto</h3><p>Colocamos a mão na massa e mantemos você informado sobre o andamento.</p></li>
+   <li><h3>Entregamos e acompanhamos</h3><p>Você recebe o projeto pronto e as orientações para usar no dia a dia.</p></li>
+  </ol>
+ </div>
+</section>
 
-  <section class="band light" id="trabalhos" aria-labelledby="work-title" style="padding-top:24px">
-    <div class="wrap">
-      <div class="work-head">
-        <div>
-          <h2 class="section-title" id="work-title">Sites pensados para vender</h2>
-          <p class="section-intro">Cada projeto tem o visual do próprio negócio e um único objetivo: levar o visitante até o WhatsApp. Nada de modelo pronto igual para todo mundo.</p>
-        </div>
-        <p class="work-hint">
-          <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13 17V7.5a2 2 0 0 1 4 0V15l6.4 1.2a3 3 0 0 1 2.4 3.3l-.8 6.2a4 4 0 0 1-4 3.5h-5.3a4 4 0 0 1-3.2-1.6l-4-5.5a2 2 0 0 1 3-2.6L13 21"/><path d="M8 7.5a7 7 0 0 1 14 0" stroke-opacity=".5"/></svg>
-          <span>Toque em qualquer projeto para abrir o site e navegar como um cliente navegaria.</span>
-        </p>
-      </div>
+<section class="band light" id="orcamento">
+ <div class="wrap simcta">
+  <div><h2>Descubra quanto custa o seu projeto</h2><p class="lead">Responda algumas perguntas rápidas sobre a sua empresa e receba uma estimativa na hora, sem compromisso.</p></div>
+  <a class="btn btn-gold" href="orcamento.html">Fazer minha simulação</a>
+ </div>
+</section>
 
-      <div class="work-grid" id="work-grid"></div>
-      <p class="work-note">Clientes reais e projetos conceito criados pela Mawe Create para mostrar nosso trabalho em diferentes ramos.</p>
-    </div>
-  </section>
+<section class="band" id="duvidas">
+ <div class="wrap">
+  <div class="head"><div class="eyebrow">Dúvidas</div><h2>Perguntas frequentes</h2></div>
+  <div class="faq" id="faq"><details><summary>Quanto custa criar um site?</summary><p>Depende do tipo de site e do que ele precisa ter. Use o simulador acima para ver um valor aproximado na hora.</p></details><details><summary>Quanto tempo leva para ficar pronto?</summary><p>Um site one page fica pronto em cerca de 7 dias úteis, e um site institucional em cerca de 12 dias úteis. O prazo exato vai na proposta.</p></details><details><summary>Vocês fazem sites personalizados?</summary><p>Sim. Cada site é criado do zero, com a identidade e o objetivo do seu negócio.</p></details><details><summary>O site funciona no celular?</summary><p>Sim. Todos os projetos são pensados primeiro para o celular, que é onde a maioria dos seus clientes vai acessar.</p></details><details><summary>Vocês cuidam do domínio e da publicação?</summary><p>O domínio fica no seu nome e custa cerca de R$ 40 por ano no Registro.br. Se preferir, fazemos o cadastro por uma taxa de R$ 25, e a publicação do site fica por nossa conta.</p></details><details><summary>Como funciona o serviço de Google Meu Negócio?</summary><p>Criamos ou melhoramos o perfil da sua empresa com fotos, horários e serviços. Também temos um plano mensal para responder avaliações e manter tudo atualizado.</p></details><details><summary>Vocês criam conteúdo para Instagram?</summary><p>Sim. Organizamos o perfil e temos planos mensais com artes, legendas, stories e calendário de conteúdo.</p></details><details><summary>Posso pedir alterações?</summary><p>Sim. Todo projeto inclui até 2 rodadas de ajustes antes da entrega.</p></details><details><summary>Depois da entrega, vocês oferecem suporte?</summary><p>Sim. Temos planos mensais de manutenção do site e de gestão do Google para quem quer seguir com a gente.</p></details><details><summary>Vocês atendem fora da minha cidade?</summary><p>Atendemos todo o Brasil. Todo o processo é 100% online, pelo WhatsApp e por videochamada.</p></details></div>
+ </div>
+</section>
 
-  <section class="band dark" id="servicos" aria-labelledby="services-title">
-    <div class="wrap">
-      <h2 class="section-title" id="services-title">Tudo o que o seu negócio precisa para vender mais</h2>
-      <p class="section-intro">Ninguém quer só um site. Você quer mais pedidos, mais agendamentos e mais faturamento. Por isso cada serviço da Mawe Create é pensado para trazer resultado, e você resolve tudo em um só lugar.</p>
-      <div class="services">
-        <div class="service">
-          <h3>Sites</h3>
-          <p>Um site que apresenta o seu negócio, passa confiança e leva o visitante direto para o seu WhatsApp, pronto para pedir, agendar ou comprar.</p>
-          <span class="for">Para transformar visitas em clientes</span>
-        </div>
-        <div class="service">
-          <h3>Google Meu Negócio</h3>
-          <p>Seu perfil no Google e no Maps configurado do jeito certo, para aparecer na hora em que alguém procura o que você faz na sua cidade.</p>
-          <span class="for">Para ser encontrado primeiro</span>
-        </div>
-        <div class="service">
-          <h3>Artes para redes sociais</h3>
-          <p>Posts e stories para Instagram e status de WhatsApp, prontos para divulgar promoções e fazer o cliente lembrar de você.</p>
-          <span class="for">Para vender todo dia</span>
-        </div>
-        <div class="service">
-          <h3>Sistemas sob medida</h3>
-          <p>Ferramentas simples para organizar o dia a dia: turmas, treinos, agenda, atendimentos e financeiro, do jeito que o seu negócio funciona.</p>
-          <span class="for">Para sair do caderno</span>
-        </div>
-        <div class="service">
-          <h3>Identidade visual</h3>
-          <p>Logo, cores e estilo para a sua marca ter a mesma cara em todo lugar: no site, no Instagram e na fachada.</p>
-          <span class="for">Para quem está começando</span>
-        </div>
-        <div class="service">
-          <h3>Manutenção mensal</h3>
-          <p>Atualizações, ajustes e suporte depois que o site está no ar. Você pede pelo WhatsApp e a gente resolve.</p>
-          <span class="for">Para não se preocupar</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band light" id="sobre" aria-labelledby="about-title">
-    <div class="wrap about">
-      <div>
-        <h2 class="section-title" id="about-title">Uma agência pequena, com atenção de verdade</h2>
-        <p>A Mawe Create é a Maria e o Wesley. Somos só nós dois, e é justamente isso que faz diferença: quem conversa com você é quem cria o seu site. Sem intermediário, sem atendimento robótico e sem sumir depois da entrega.</p>
-        <p>Trabalhamos 100% online, então atendemos negócios de qualquer cidade do Brasil.</p>
-        <ul class="promise">
-          <li><strong>Passo a passo</strong><span>Você acompanha cada etapa</span></li>
-          <li><strong>2 rodadas</strong><span>de ajustes incluídas</span></li>
-          <li><strong>Seu domínio</strong><span>fica no nome da sua empresa</span></li>
-        </ul>
-      </div>
-      <div class="about-mark" role="img" aria-label="Símbolo da Mawe Create: a letra M dentro de um arco dourado">
-        <svg viewBox="0 0 360 450" aria-hidden="true">
-          <path d="M70 450 V180 A110 110 0 0 1 290 180 V450" fill="none" stroke="#B08D57" stroke-width="5"/>
-          <text x="180" y="330" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="600" font-size="170" fill="#EFE9DD">M</text>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <section class="band light" id="duvidas" aria-labelledby="faq-title" style="padding-top:24px">
-    <div class="wrap">
-      <h2 class="section-title" id="faq-title">Dúvidas comuns</h2>
-      <div class="faq">
-        <details>
-          <summary>O orçamento tem algum compromisso?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>Nenhum. Você conta sobre o seu negócio, a gente indica o tipo de site ideal e envia o valor pelo WhatsApp. Se fizer sentido para você, começamos o projeto. Se não, tudo bem.</p></div>
-        </details>
-        <details>
-          <summary>Quanto tempo leva para o site ficar pronto?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>De 5 a 12 dias úteis, dependendo do tamanho do site. O prazo começa a contar quando recebemos as informações e as fotos do seu negócio.</p></div>
-        </details>
-        <details>
-          <summary>Como funciona o pagamento?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>O pagamento é feito por Pix, e você escolhe a forma que preferir: o valor inteiro no início, ou 50% para começar e 50% no final, antes da entrega do site.</p></div>
-        </details>
-        <details>
-          <summary>Preciso ir até algum lugar ou fazer reunião?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>Não. Tudo acontece pelo WhatsApp: você responde um formulário rápido com as informações do seu negócio, acompanha cada etapa do site e pede os ajustes por mensagem. Se preferir conversar ao vivo, fazemos uma chamada de vídeo.</p></div>
-        </details>
-        <details>
-          <summary>E se eu quiser mudar alguma coisa?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>Antes da entrega, você tem duas rodadas de ajustes incluídas. Depois que o site estiver no ar, as mudanças podem ser feitas pelo plano de manutenção mensal.</p></div>
-        </details>
-        <details>
-          <summary>O domínio fica no meu nome?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>Sim. O endereço do site (por exemplo, seunegocio.com.br) é registrado no nome da sua empresa, e a gente te orienta em todo o processo.</p></div>
-        </details>
-        <details>
-          <summary>Já tenho Instagram. Preciso mesmo de um site?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>O Instagram é ótimo para quem já te conhece. O site é para quem ainda não te conhece e está procurando no Google. Um completa o outro.</p></div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section class="band dark" id="orcamento" aria-labelledby="cta-title">
-    <div class="wrap cta">
-      <div>
-        <h2 id="cta-title">Vamos colocar o seu negócio na frente do cliente?</h2>
-        <p class="section-intro">Conte rapidinho sobre a sua empresa e a gente te manda um orçamento pelo WhatsApp. É grátis e sem compromisso.</p>
-        <ol class="steps">
-          <li><span><b>Você manda os dados</b> pelo formulário ao lado</span></li>
-          <li><span><b>A gente analisa o seu negócio</b> e envia o orçamento pelo WhatsApp</span></li>
-          <li><span><b>Você decide</b> se quer seguir com o projeto</span></li>
-        </ol>
-      </div>
-
-      <form class="request" id="request" novalidate>
-        <div class="field" id="f-name">
-          <label for="name">Seu nome</label>
-          <input id="name" name="name" autocomplete="name" placeholder="Como podemos te chamar?">
-          <span class="error">Escreva seu nome para a gente saber com quem fala.</span>
-        </div>
-        <div class="field" id="f-biz">
-          <label for="biz">Nome do negócio</label>
-          <input id="biz" name="biz" autocomplete="organization" placeholder="Ex.: Padaria Pão de Ouro">
-          <span class="error">Escreva o nome do negócio para prepararmos o orçamento.</span>
-        </div>
-        <div class="field">
-          <label for="kind">Ramo</label>
-          <select id="kind" name="kind">
-            <option>Alimentação</option>
-            <option>Estética e beleza</option>
-            <option>Saúde e clínicas</option>
-            <option>Barbearia</option>
-            <option>Serviços e oficinas</option>
-            <option>Loja e comércio</option>
-            <option>Outro</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="link">Instagram ou site atual <span class="opt">(opcional)</span></label>
-          <input id="link" name="link" placeholder="@seunegocio">
-        </div>
-        <button class="btn btn-gold" type="submit">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
-          Pedir meu orçamento no WhatsApp
-        </button>
-        <p class="form-note">O WhatsApp abre com a mensagem pronta. É só enviar.</p>
-      </form>
-    </div>
-  </section>
-
+<section class="band final" id="contato">
+ <div class="wrap">
+  <img src="assets/simbolo-mawe.png" alt="" width="56" height="70" style="border-radius:6px">
+  <h2>Pronto para levar sua marca <span class="serif">além?</span></h2>
+  <p class="lead">Conte o que você precisa e receba uma proposta pensada para o seu negócio.</p>
+  <div class="ctas"><a class="btn btn-gold" href="orcamento.html">Simular meu orçamento</a><a class="btn btn-line" href="https://wa.me/5547992088468?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20MaweCreate." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+ </div>
+</section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div>
-      <a class="brand" href="#inicio" aria-label="Mawe Create, voltar ao início">
-        <span class="brand-arch" aria-hidden="true">M</span>
-        <span class="brand-name">MAWE <span>CREATE</span></span>
-      </a>
-      <p class="tagline">Experiências digitais com propósito. Atendimento online para todo o Brasil.</p>
-    </div>
-    <div>
-      <h4>WhatsApp</h4>
-      <a href="https://wa.me/5547992088468?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mawe%20Create." target="_blank" rel="noopener">(47) 99208-8468</a>
-    </div>
-    <div>
-      <h4>Instagram</h4>
-      <a href="https://www.instagram.com/mawecreate/" target="_blank" rel="noopener">@mawecreate</a>
-    </div>
-    <div>
-      <h4>E-mail</h4>
-      <a href="mailto:mawe.create@gmail.com">mawe.create@gmail.com</a>
-    </div>
-    <p class="copy">© 2026 Mawe Create</p>
-  </div>
+ <div class="wrap">
+  <div><a class="brand" href="index.html"><img src="assets/simbolo-mawe.png" alt="" width="34" height="42"><span><b>MAWE</b><i>CREATE</i></span></a><p class="mute" style="margin-top:16px;max-width:36ch;font-size:15px">Experiências digitais com propósito. Atendimento 100% online para todo o Brasil.</p></div>
+  <div><h4>Serviços</h4><ul><li><a href="criacao-de-sites.html">Criação de sites</a></li><li><a href="google-meu-negocio.html">Google Meu Negócio</a></li><li><a href="social-media.html">Social Media</a></li><li><a href="sistemas-personalizados.html">Sistemas personalizados</a></li></ul></div>
+  <div><h4>Navegue</h4><ul><li><a href="projetos.html">Projetos</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="blog.html">Blog</a></li><li><a href="orcamento.html">Simular orçamento</a></li><li><a href="privacidade.html">Política de privacidade</a></li></ul></div>
+  <div><h4>Contato</h4><ul><li><a href="https://wa.me/5547992088468" target="_blank" rel="noopener">WhatsApp (47) 99208-8468</a></li><li><a href="mailto:contato@mawecreate.com.br">contato@mawecreate.com.br</a></li><li><a href="https://instagram.com/mawecreate" target="_blank" rel="noopener">Instagram @mawecreate</a></li></ul></div>
+ </div>
+ <p class="copy"><span>© 2026 MaweCreate. Todos os direitos reservados.</span><a href="privacidade.html">Política de privacidade</a></p>
 </footer>
-
-<a class="float-wa" id="float-wa" href="https://wa.me/5547992088468?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mawe%20Create%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar com a Mawe Create no WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
-  <span>Fale com a gente</span>
-</a>
-
+<a class="wa" href="https://wa.me/5547992088468?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20MaweCreate." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
 <script>
-const WHATSAPP = '5547992088468';
-
-const projects = [
-  { cls: 'p-jakeline', nav: 'JAKELINE CUCO', name: 'Jakeline Cuco', kind: 'Massoterapia', line: 'Seu momento de cuidado e bem-estar, com agendamento pelo WhatsApp.', cta: 'Agendar pelo WhatsApp', desc: 'One page pensado para transformar visitas em agendamentos', url: 'https://jakelinecucomassoterapia.vercel.app/', shape: '#E8559B33', real: true },
-  { cls: 'p-framboesa', nav: 'DONA FRAMBOESA', name: 'Dona Framboesa', kind: 'Confeitaria', line: 'Bolo bonito é bom. Bolo gostoso é melhor ainda.', cta: 'Fazer encomenda', desc: 'Cardápio online com encomenda direto no WhatsApp', url: 'https://donaframboesa.vercel.app/', shape: '#FF7AB644' },
-  { cls: 'p-vitta', nav: 'VITTASKIN', name: 'VittaSkin', kind: 'Skincare', line: 'O kit completo para a sua rotina de cuidados diários.', cta: 'Comprar o kit', desc: 'Página de venda de um produto', url: 'https://vittaskin.vercel.app/', shape: '#E3A99A66' },
-  { cls: 'p-nexa', nav: 'NEXA', name: 'Nexa Contabilidade', kind: 'Contabilidade', line: 'Contabilidade consultiva para empresas que querem crescer.', cta: 'Falar com um contador', desc: 'Escritório de contabilidade', url: 'https://nexacontabilidade.vercel.app/', shape: '#E7B54A33' },
-  { cls: 'p-luna', nav: 'LUNA', name: 'Luna Arquitetura', kind: 'Arquitetura e interiores', line: 'Projetos residenciais pensados para o jeito de cada família.', cta: 'Ver projetos', desc: 'Estúdio de arquitetura', url: 'https://arquiteturaluna.vercel.app', shape: '#FFFFFF55' },
-  { cls: 'p-summita', nav: 'SUMMITA', name: 'Summita', kind: 'Evento de negócios', line: 'O fórum de liderança e inovação do ano.', cta: 'Garantir vaga', desc: 'Site de evento corporativo', url: 'https://summita.vercel.app', shape: '#5FB3A133' }
+{
+const $=id=>document.getElementById(id);
+/* Projetos */
+const W=[
+ {n:'The House Burguer & Pizza',c:'Alimentação',s:'Hamburgueria e pizzaria',d:'Site com cardápio, avaliações e pedido pelo WhatsApp, além da gestão do perfil no Google.',img:'house',real:1,url:'https://thehouseburgueria.com.br'},
+ {n:'Jakeline Cuco Massoterapeuta',c:'Saúde e bem-estar',s:'Massoterapia',d:'Identidade visual e site que transmitem calma e levam o cliente direto para o agendamento.',img:'jakeline',real:1,url:'https://jakelinecucomassoterapia.vercel.app'},
+ {n:'Brasa Bruta',c:'Alimentação',s:'Hamburgueria',d:'Cardápio com sacola de pedidos, fotos que dão fome e envio do pedido pelo WhatsApp.',img:'brasa',url:'https://brasabruta.vercel.app'},
+ {n:'Dona Framboesa',c:'Alimentação',s:'Confeitaria',d:'Vitrine de bolos por categoria, tabela de tamanhos e encomenda em poucos toques.',img:'framboesa',url:'https://donaframboesa.vercel.app'},
+ {n:'Dona Nena',c:'Alimentação',s:'Salgados para festa',d:'Cardápio por cento, kits prontos para festa e pedido direto pelo WhatsApp.',img:'nena',url:'https://donanena.vercel.app'}
 ];
-
-function mini(p) {
-  return `<div class="mini ${p.cls}">
-    <span class="m-shape" style="width:62%;height:42%;right:-18%;top:6%;background:${p.shape}"></span>
-    <div class="m-nav"><span>${p.nav}</span><i></i></div>
-    <div class="m-kind">${p.kind}</div>
-    <div class="m-title">${p.name}</div>
-    <div class="m-line">${p.line}</div>
-    <span class="m-cta">${p.cta}</span>
-  </div>`;
+const cats=['Todos',...new Set(W.map(w=>w.c))];
+let cur='Todos';
+const draw=()=>{
+ $('filters').innerHTML=cats.map(c=>`<button type="button" aria-pressed="${c===cur}" data-c="${c}">${c}</button>`).join('');
+ $('works').innerHTML=W.filter(w=>cur==='Todos'||w.c===cur).map(w=>`<article class="work"><div class="shot${w.img?'':' txt'}">${w.img?`<div class="phone"><img src="assets/${w.img}.webp" alt="Site ${w.n} no celular"></div>`:`<div>Jakeline<br>Cuco</div>`}</div><div class="body"><span class="badge${w.real?' real':''}">${w.real?'Cliente':'Projeto conceito'}</span><h3>${w.n}</h3><span class="seg">${w.s}</span><p>${w.d}</p><a href="${w.url}" target="_blank" rel="noopener">Ver site &rarr;</a></div></article>`).join('');
+};
+$('filters').addEventListener('click',e=>{const b=e.target.closest('button');if(b){cur=b.dataset.c;draw()}});
+draw();
+/* Perguntas frequentes */
+const F=[
+ ['Quanto custa criar um site?','Depende do tipo de site e do que ele precisa ter. Use o simulador acima para ver um valor aproximado na hora.'],
+ ['Quanto tempo leva para ficar pronto?','Um site one page fica pronto em cerca de 7 dias úteis, e um site institucional em cerca de 12 dias úteis. O prazo exato vai na proposta.'],
+ ['Vocês fazem sites personalizados?','Sim. Cada site é criado do zero, com a identidade e o objetivo do seu negócio.'],
+ ['O site funciona no celular?','Sim. Todos os projetos são pensados primeiro para o celular, que é onde a maioria dos seus clientes vai acessar.'],
+ ['Vocês cuidam do domínio e da publicação?','O domínio fica no seu nome e custa cerca de R$ 40 por ano no Registro.br. Se preferir, fazemos o cadastro por uma taxa de R$ 25, e a publicação do site fica por nossa conta.'],
+ ['Como funciona o serviço de Google Meu Negócio?','Criamos ou melhoramos o perfil da sua empresa com fotos, horários e serviços. Também temos um plano mensal para responder avaliações e manter tudo atualizado.'],
+ ['Vocês criam conteúdo para Instagram?','Sim. Organizamos o perfil e temos planos mensais com artes, legendas, stories e calendário de conteúdo.'],
+ ['Posso pedir alterações?','Sim. Todo projeto inclui até 2 rodadas de ajustes antes da entrega.'],
+ ['Depois da entrega, vocês oferecem suporte?','Sim. Temos planos mensais de manutenção do site e de gestão do Google para quem quer seguir com a gente.'],
+ ['Vocês atendem fora da minha cidade?','Atendemos todo o Brasil. Todo o processo é 100% online, pelo WhatsApp e por videochamada.']
+];
+$('faq').innerHTML=F.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
 }
-
-// Arco do topo: troca de site a cada 3 segundos
-const win = document.getElementById('window');
-const caption = document.getElementById('stage-caption');
-win.innerHTML = projects.map((p, i) => `<div class="slide${i === 0 ? ' on' : ''}">${mini(p)}</div>`).join('');
-const slides = win.querySelectorAll('.slide');
-const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let current = 0;
-if (!reduce) {
-  setInterval(() => {
-    slides[current].classList.remove('on');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('on');
-    const p = projects[current];
-    caption.innerHTML = `Agora: <b>${p.name}</b>, ${p.kind.toLowerCase()}`;
-  }, 3000);
-}
-
-// Grade de trabalhos
-document.getElementById('work-grid').innerHTML = projects.map(p => `
-  <a class="work" href="${p.url}" target="_blank" rel="noopener" aria-label="Abrir o site ${p.name} em uma nova aba">
-    <div class="work-screen">
-      ${mini(p)}
-      ${p.real ? '<span class="real-tag">Cliente real</span>' : ''}
-      <span class="open">Abrir site
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5"/></svg>
-      </span>
-    </div>
-    <div class="work-info">
-      <span class="kind">${p.kind}</span>
-      <h3>${p.name}</h3>
-      <p>${p.desc}</p>
-    </div>
-  </a>`).join('');
-
-// Formulário que monta a mensagem do WhatsApp
-const form = document.getElementById('request');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = form.name.value.trim();
-  const biz = form.biz.value.trim();
-  document.getElementById('f-name').classList.toggle('invalid', !name);
-  document.getElementById('f-biz').classList.toggle('invalid', !biz);
-  if (!name) { form.name.focus(); return; }
-  if (!biz) { form.biz.focus(); return; }
-  const link = form.link.value.trim();
-  let msg = `Olá! Vim pelo site da Mawe Create e quero um orçamento para o site do meu negócio.\n\nMeu nome: ${name}\nNegócio: ${biz}\nRamo: ${form.kind.value}`;
-  if (link) msg += `\nInstagram ou site: ${link}`;
-  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
-});
-['name', 'biz'].forEach(id => document.getElementById(id).addEventListener('input', e => {
-  if (e.target.value.trim()) e.target.parentElement.classList.remove('invalid');
-}));
-
-// Botão flutuante aparece depois do topo e some na seção do orçamento
-const floatWa = document.getElementById('float-wa');
-const hero = document.querySelector('.hero');
-const cta = document.getElementById('orcamento');
-let pastHero = false, atCta = false;
-const update = () => floatWa.classList.toggle('show', pastHero && !atCta);
-new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; update(); }).observe(hero);
-new IntersectionObserver(([e]) => { atCta = e.isIntersecting; update(); }, { threshold: .25 }).observe(cta);
 </script>
+<script src="assets/site.js" defer></script>
+<div class="cookie" id="cookie" role="dialog" aria-label="Aviso de cookies" hidden>
+ <strong>Este site usa cookies</strong>
+ <p>Usamos cookies para entender como o site é usado e melhorar a sua experiência. Saiba mais na nossa <a href="privacidade.html">política de privacidade</a>.</p>
+ <div class="row"><button class="btn btn-gold" type="button" data-c="aceito">Aceitar</button><button class="btn btn-line" type="button" data-c="recusado">Recusar</button></div>
+</div>
 </body>
 </html>
